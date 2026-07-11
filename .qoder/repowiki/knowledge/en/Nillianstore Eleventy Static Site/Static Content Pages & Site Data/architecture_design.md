@@ -1,0 +1,4 @@
+Two parallel directories form a flat content model consumed by Eleventy:
+- `page/*.md` — per-page Markdown files (about, contact, premium, pro, proshop, sourcecode) each declaring an Eleventy front-matter block (`layout`, `title`, `description`, `cover`, `permalink`, `eleventyNavigation`) that selects the shared Nunjucks layout at `layouts/page.njk`.
+- `_data/*.json` — Eleventy global data files loaded automatically into every page's context: `metadata.json` (site-wide SEO/feed/author), `home.json` (hero copy for the homepage), `template.json` / `premier.json` / `premium.json` (curated lists of Eleventy templates with cover/title/description/url/link), and `widget.json` (reusable UI strings like help button text).
+There is no code inside this module; it is purely data + markup consumed by templates elsewhere in the project. Dependency direction is one-way: pages and data are read by layouts/partials, never the reverse.

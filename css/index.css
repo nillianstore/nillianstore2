@@ -1,0 +1,51 @@
+a {
+    text-decoration: none;
+      color: black;
+      }
+      .tag {
+        font-size: 10px;
+        }
+        .black {
+          background-color: black;
+          }
+          /* Constrain blog post images to max 600px, but stay responsive */
+.col-md-6 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  width: auto;
+}
+
+/* On larger screens, cap at 600px */
+@media (min-width: 768px) {
+  .col-md-6 img {
+    max-width: 600px;
+  }
+}
+
+/* CTA Video Wrapper Styles */
+.cta-video-wrapper {
+  width: 100%;
+}
+
+.cta-video {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 1rem;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .cta-video {
+    max-width: 100vw;
+    border-radius: 0.75rem;
+    aspect-ratio: 9 / 16;
+  }
+  .cta-video-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

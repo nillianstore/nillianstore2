@@ -1,0 +1,1 @@
+`npm run build` runs Eleventy to produce `_site`; `npm run watch`/`serve` starts Browsersync with a custom 404 middleware reading `_site/404.html`. Filenames are validated via `node scripts/check-filenames.js` before commit.

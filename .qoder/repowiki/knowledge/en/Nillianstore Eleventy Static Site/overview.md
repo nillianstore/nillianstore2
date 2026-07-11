@@ -1,0 +1,1 @@
+Root of the Nillianstore Eleventy site that wires together content, templates, feeds, and automation scripts into a single static build targeting Netlify.

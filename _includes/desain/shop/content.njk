@@ -1,0 +1,177 @@
+<article class="container py-5">
+  <!-- 1. Product Title -->
+  <h1 class="mb-2">{{ title }}</h1>
+
+  <!-- 2. Description -->
+  <h2 class="lead mb-4 h4 text-muted">{{ description }}</h2>
+
+  <!-- 3. Cover Photo (Left) + Features, Price & CTA (Right) -->
+  <div class="row align-items-start mb-5">
+    <!-- Left: Cover Image -->
+    <div class="col-md-6">
+      {% if cover %}
+        <img
+          src="{{ cover }}"
+          alt="{{ title }} - Main Image"
+          class="img-fluid rounded"
+          width="600"
+          height="600"
+          loading="lazy"
+          style="max-height: 400px; object-fit: contain;"
+        />
+      {% else %}
+        <p class="text-muted">No image available</p>
+      {% endif %}
+    </div>
+
+    <!-- Right: Features + Price + CTA -->
+    <div class="col-md-6">
+      <!-- Features List -->
+      <ul class="list-unstyled small mb-3">
+        <li><strong>Features:</strong></li>
+        {% for point in bullet_points %}
+          <li class="mb-1">✓ {{ point }}</li>
+        {% endfor %}
+      </ul>
+
+      <!-- Price -->
+      <p class="h4 text-primary mb-3">{{ price }}</p>
+
+      <!-- Buy Button -->
+      <a
+        href="{{ amazonLink }}"
+        target="_blank"
+        rel="noopener nofollow sponsored"
+        id="amazon-buy-button"
+        class="btn btn-lg px-4 w-100"
+        style="background: #ff9900; color: #000; border: none; font-weight: 600;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart me-2" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H15.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13.991 12H4.5a.5.5 0 0 1-.491-.408L3.1 6.379 1.485 1.5H.5a.5.5 0 0 1-.5-.5z"/>
+          <path d="M4 14a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2V5H4v9z"/>
+        </svg>
+        Buy on Amazon.ae
+      </a>
+      <p class="text-muted mt-2 small text-center">
+        Ships from Amazon.ae • Fast UAE delivery • Easy returns
+      </p>
+
+      <!-- Trust Badges -->
+      <div class="d-flex flex-wrap justify-content-center mt-3" style="gap: 8px;">
+        <span class="badge bg-success text-white px-2 py-1 small">
+          <i class="fas fa-shield-alt me-1"></i>Secure Checkout
+        </span>
+        <span class="badge bg-primary text-white px-2 py-1 small">
+          <i class="fas fa-truck me-1"></i>Fast UAE Delivery
+        </span>
+        <span class="badge bg-info text-white px-2 py-1 small">
+          <i class="fas fa-undo me-1"></i>15-Day Returns
+        </span>
+        <span class="badge bg-warning text-dark px-2 py-1 small">
+          <i class="fab fa-amazon me-1"></i>Amazon Verified
+        </span>
+      </div>
+
+      <!-- Policy Links -->
+      <div class="text-center mt-3">
+        <a href="/shipping-policy/" class="text-muted text-decoration-none small me-3">Shipping</a>
+        <a href="/refund-policy/" class="text-muted text-decoration-none small me-3">Returns</a>
+        <a href="/privacy-policy/" class="text-muted text-decoration-none small me-3">Privacy</a>
+        <a href="/terms-of-service/" class="text-muted text-decoration-none small">Terms</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Tags Line (White Text, Black Background) -->
+<div class="mb-4 p-2 bg-dark text-white rounded d-inline-flex flex-wrap" style="gap: 0.5rem;">
+  {% for tag in tags %}
+    <a
+      href="/tags/{{ tag | safeSlug }}/"
+      class="text-white text-decoration-none px-2 py-1"
+      style="font-size: 0.9rem; border-radius: 6px;"
+    >
+      #{{ tag }}
+    </a>
+  {% endfor %}
+</div>
+
+  <!-- 5. Gallery (if multiple images) -->
+  {% if images and images.length > 1 %}
+    <div class="my-5">
+      <h3>More Views</h3>
+      {% include "desain/shop/gallery.njk" %}
+    </div>
+  {% endif %}
+
+  <!-- 6. Remaining Content (Why You'll Love It, How to Apply, etc.) -->
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <h2>Product Details</h2>
+      {{ content | safe }}
+    </div>
+  </div>
+
+  <!-- 7. Related Products -->
+  {% set relatedShops = collections.shop %}
+  {% set currentTags = tags | filterTagList %}
+  {% set related = [] %}
+  {% for item in relatedShops %}
+    {% if item.url != page.url %}
+      {% set itemTags = item.data.tags | filterTagList %}
+      {% for t in currentTags %}
+        {% if t in itemTags %}
+          {% if related.push(item) %}{% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% if related.length > 0 %}
+  <div class="container mt-5">
+    <h2>Related Products</h2>
+    <div class="row">
+      {% for rel in related | head(3) %}
+        <div class="col-md-4 mb-4">
+          <a href="{{ rel.url | url }}" class="text-dark text-decoration-none">
+            {% if rel.data.cover %}
+            <img src="{{ rel.data.cover }}" alt="{{ rel.data.cover_alt or rel.data.title }}" loading="lazy" width="300" height="300" class="img-fluid rounded">
+            {% endif %}
+            <h3 class="h5 mt-2">{{ rel.data.title }}</h3>
+            <p class="small text-muted">{{ rel.data.price }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+    <!-- Previous / Next Navigation -->
+  {% include "desain/shop/nav.njk" %}
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var buyButton = document.getElementById('amazon-buy-button');
+  if (buyButton) {
+    buyButton.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'begin_checkout', {
+          'currency': 'AED',
+          'value': {{ price | replace("AED ", "") | replace(",", "") | default(0) }},
+          'items': [
+            {
+              'item_id': '{{ ecwidId }}',
+              'item_name': '{{ title }}',
+              'price': {{ price | replace("AED ", "") | replace(",", "") | default(0) }},
+              'quantity': 1
+            }
+          ]
+        });
+        // Also send the specific event name Google Ads is looking for
+        gtag('event', 'ads_conversion_Begin_checkout_1', {
+          'currency': 'AED',
+          'value': {{ price | replace("AED ", "") | replace(",", "") | default(0) }}
+        });
+      }
+    });
+  }
+});
+</script>

@@ -1,0 +1,1 @@
+Eleventy Nunjucks templates (`.njk`) with Eleventy's built-in filters (`htmlDateString`, `rssDate`, `striptags`, `xmlEncode`, `dump`, `url`, `absoluteUrl`) and global collections (`posts`, `shop`).

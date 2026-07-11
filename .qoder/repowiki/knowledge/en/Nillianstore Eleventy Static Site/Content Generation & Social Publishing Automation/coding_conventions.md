@@ -1,0 +1,4 @@
+- External credentials are always read via `os.getenv(...)` at module top rather than passed as parameters, keeping scripts self-contained CLIs.
+- Each script exposes its workflow through a `main()` function invoked only when executed directly (`if __name__ == "__main__": main()`), enabling imports for targeted tests like `test_blog_bot_run.py`.
+- Product selection is deduplicated by appending the product id to a JSON log file (`blog_log.json` / `social_log.json`) and filtering `SHOP_DIR.glob("*.md")` by file stem before random choice.
+- Groq calls follow a fixed shape: Bearer-token header, `model="llama-3.3-70b-versatile"`, a user message prompt, and `response_format={"type":"json_object"}`.

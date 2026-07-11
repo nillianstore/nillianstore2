@@ -1,0 +1,32 @@
+schema_version: 1
+module_path: ""
+title: Nillianstore Eleventy Static Site
+scope:
+    - .eleventy.js
+    - .stackblitzrc
+    - .travis.yml
+    - 404.md
+    - README.md
+    - SOCIAL_BOT_SETUP.md
+    - build_trigger.txt
+    - google6392df0c2099b010.html.njk
+    - index.njk
+    - netlify.toml
+    - package.json
+    - page-list.njk
+    - product.njk
+    - robots.txt.njk
+    - sitemap.xml.njk
+    - tags-list.njk
+    - tags.njk
+    - .editorconfig
+    - .eleventyignore
+    - .gitignore
+    - .nvmrc
+    - LICENSE
+    - archive.njk
+    - blog_log.json
+    - social_log.json
+source_files: []
+depends_on: []
+related_to: []

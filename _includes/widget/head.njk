@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="{{metadata.language}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  {%- if tags and "shop" in tags %}
+  <!-- Swiper CSS - only on product pages with galleries -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </noscript>
+
+  <!-- Swiper JS - only on product pages -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (!document.querySelector('.swiper')) return;
+      var swiperScript = document.createElement('script');
+      swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+      swiperScript.onload = function() {
+        new Swiper('.swiper', {
+          loop: false,
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+          pagination: { el: '.swiper-pagination', clickable: true },
+          spaceBetween: 10,
+          slidesPerView: 1,
+        });
+      };
+      document.head.appendChild(swiperScript);
+    });
+  </script>
+  {%- endif %}
+  {% include "widget/seo.njk" %}
+  <meta name="generator" content="{{ eleventy.generator }}">
+  <meta name="developer" content="{{ metadata.author.url }}">
+  <link rel="apple-touch-icon" href="{{metadata.icon}}">
+  <link rel="icon" type="image/x-icon" href="{{metadata.icon}}" />
+  <!-- CSS: load critical first, defer non-critical -->
+  <style>
+    /* Critical Bootstrap utilities needed for above-the-fold rendering */
+    *,*::before,*::after{box-sizing:border-box}
+    .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+    .row{--bs-gutter-x:1.5rem;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-x)*-.5);margin-right:calc(var(--bs-gutter-x)*-.5);margin-left:calc(var(--bs-gutter-x)*-.5)}
+    .col-md-4,.col-md-6,.col-md-12,.col-lg-10{flex:0 0 auto;width:100%}
+    .img-fluid{max-width:100%;height:auto}
+    .d-flex{display:flex!important}
+    .justify-content-center{justify-content:center!important}
+    .justify-content-end{justify-content:flex-end!important}
+    .text-center{text-align:center!important}
+    .text-dark{color:#212529!important}
+    .text-muted{color:#6c757d!important}
+    .text-decoration-none{text-decoration:none!important}
+    .rounded{border-radius:.375rem!important}
+    .mb-0{margin-bottom:0!important}
+    .mb-2{margin-bottom:.5rem!important}
+    .mb-3{margin-bottom:1rem!important}
+    .mb-4{margin-bottom:1.5rem!important}
+    .mt-2{margin-top:.5rem!important}
+    .mt-3{margin-top:1rem!important}
+    .mt-5{margin-top:3rem!important}
+    .p-3{padding:1rem!important}
+    .p-md-5{padding:3rem!important}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.5;color:#212529;background-color:#fff}
+    a{color:#0d6efd;text-decoration:underline}
+    img{vertical-align:middle}
+    .navbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:1rem}
+    .navbar-brand{padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;text-decoration:none;white-space:nowrap}
+    .nav-link{display:block;padding:.5rem 1rem;color:#0d6efd;text-decoration:none}
+    .btn{display:inline-block;font-weight:400;line-height:1.5;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem}
+    .btn-dark{color:#fff;background-color:#212529;border-color:#212529}
+    .btn-lg{padding:.5rem 1rem;font-size:1.25rem;border-radius:.3rem}
+    .lead{font-size:1.25rem;font-weight:300}
+    .h4{font-size:calc(1.275rem + .3vw)}
+    .h5{font-size:1.25rem}
+    h1{font-size:calc(1.375rem + 1.5vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
+    h2{font-size:calc(1.325rem + .9vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
+    h3{font-size:calc(1.3rem + .6vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
+    h4{font-size:calc(1.275rem + .3vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
+    .bg-light{background-color:#f8f9fa!important}
+    .bg-dark{background-color:#212529!important}
+    .text-white{color:#fff!important}
+    .badge{display:inline-block;padding:.35em .65em;font-size:.75em;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.375rem}
+    .list-unstyled{padding-left:0;list-style:none}
+    .small,.small p{font-size:.875em}
+    @media(min-width:768px){.col-md-4{flex:0 0 auto;width:33.33333333%}.col-md-6{flex:0 0 auto;width:50%}.col-md-12{flex:0 0 auto;width:100%}.col-lg-10{flex:0 0 auto;width:83.33333333%}}
+  </style>
+  <link rel="preload" href="{{ '/css/bs.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/css/bs.css' | url }}"></noscript>
+  <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+  <!-- Font Awesome: preconnect + preload fonts for faster rendering -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+  {%- if tags and "shop" in tags %}
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  {%- endif %}
+
+  <!-- Font Display: swap override for Font Awesome -->
+  <style>
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-display: swap;
+      font-weight: 900;
+      font-style: normal;
+      src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-display: swap;
+      font-weight: 400;
+      font-style: normal;
+      src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2) format("woff2");
+    }
+    @font-face {
+      font-family: "Font Awesome 6 Brands";
+      font-display: swap;
+      font-weight: 400;
+      font-style: normal;
+      src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2) format("woff2");
+    }
+  </style>
+
+  <style>
+    /* Hero Image Styling - prevent CLS with fixed aspect ratio */
+    .hero-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-image-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 1200 / 630;
+    }
+    .hero-image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /* Reserve space for navbar logo to prevent CLS */
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ3RW9JZTL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EJ3RW9JZTL');
+  </script>
+
+  <!-- EmbedSocial - loads only when widget is present -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var embedWidget = document.querySelector('.embedsocial-hashtag');
+      if (embedWidget) {
+        var script = document.createElement('script');
+        script.src = 'https://embedsocial.com/cdn/ht.js';
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    });
+  </script>
+</head>
+<body>

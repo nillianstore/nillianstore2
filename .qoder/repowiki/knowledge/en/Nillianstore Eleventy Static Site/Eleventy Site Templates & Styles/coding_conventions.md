@@ -1,0 +1,6 @@
+- Reusable HTML fragments live under `_includes/widget/` and are composed via `{% include "widget/<name>.njk" %}` rather than being inlined in layouts.
+- Theme variants are layered through `_includes/desain/themes/*.njk` files that re-include their own `control.njk`/`head.njk`/`slider.njk` blocks, letting free/pro/premier override behavior without duplicating full sections.
+- Per-feature theme overrides are grouped by domain folder (`desain/blog/`, `desain/shop/`, `desain/contact/`, `desain/home/`, `desain/page/`) so each section has its own header/nav/content/post includes.
+- Heavy third-party resources (Swiper, Font Awesome, Bootstrap) are loaded asynchronously using `rel=preload` + `onload="this.rel='stylesheet'"` with noscript fallbacks, and JavaScript is deferred until DOMContentLoaded.
+- Layouts declare their wrapper via YAML front-matter `layout: layouts/base.njk` and render body content with `{{ content | safe }}` instead of manual markup.
+- Asset URLs go through the Eleventy `url` filter (e.g. `'{{ "/css/bs.css" | url }}'`) rather than hard-coded paths.

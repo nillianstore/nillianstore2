@@ -1,0 +1,5 @@
+- Product files are named after their Amazon/ecwid ID (B-prefixed alphanumeric) so the filename doubles as the unique product key.
+- Every product page declares `layout: layouts/shop.njk` in front matter to share a single rendering template across all items.
+- Front matter follows a fixed schema — `title`, `description`, `price`, `cover`, `images[]`, `ecwidId`, `category`, `tags[]`, `amazonLink`, `permalink`, `date`, `bullet_points[]`, `cover_alt`, `image_alts[]` — kept consistent across all pages.
+- Permalink paths use lowercase kebab-case derived from the product ID (`/shop/b0clhgcyrn/`) while image assets reference the original uppercase ID (`/img/B0CLHGCYRN.webp`).
+- Content is written as SEO-optimized English copy targeting UAE cities (Dubai, Abu Dhabi, Sharjah) and cultural occasions (Iftar, Eid), with localized price formatting using AED.

@@ -1,0 +1,1 @@
+Eleventy Nunjucks templates that generate Atom, JSON Feed, and product catalog feeds from the posts and shop collections.

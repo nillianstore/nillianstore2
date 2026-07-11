@@ -1,0 +1,3 @@
+- Each Markdown page declares its rendering via an Eleventy front-matter YAML block specifying `layout`, `title`, `description`, `cover`, `permalink`, and optional `eleventyNavigation` for the nav tree.
+- Global content lives under `_data/` as plain JSON objects or arrays, keyed by feature (e.g. `metadata`, `home`, `template`, `premier`, `premium`, `widget`) so templates can reference them by filename without imports.
+- Template listing datasets (`template.json`, `premier.json`, `premium.json`) share a uniform record shape `{ cover, title, description, url, link }` to keep list rendering generic.

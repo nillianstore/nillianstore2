@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: build_scripts
+title: Content Generation & Social Publishing Automation
+scope:
+    - scripts/
+    - blog_bot.py
+    - social_bot.py
+    - test_frontmatter.py
+    - verify_links.py
+source_files: []
+depends_on: []
+related_to:
+    - path: ci_cd

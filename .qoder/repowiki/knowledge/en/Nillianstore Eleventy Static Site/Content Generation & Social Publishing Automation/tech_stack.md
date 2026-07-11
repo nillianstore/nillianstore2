@@ -1,0 +1,1 @@
+Python 3 with `frontmatter` for YAML frontmatter parsing, `requests` for HTTP, and `subprocess` for Git; Node.js script uses only built-in `fs`/`path`. External APIs: Groq OpenAI-compatible chat completions and Meta Graph API v18.

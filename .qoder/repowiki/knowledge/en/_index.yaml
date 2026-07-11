@@ -1,0 +1,124 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+nodes_managed: true
+exported_at: "2026-07-11T18:55:19Z"
+modules:
+    "":
+        dir_name: Nillianstore Eleventy Static Site
+        title: Nillianstore Eleventy Static Site
+        scope:
+            - .eleventy.js
+            - .stackblitzrc
+            - .travis.yml
+            - 404.md
+            - README.md
+            - SOCIAL_BOT_SETUP.md
+            - build_trigger.txt
+            - google6392df0c2099b010.html.njk
+            - index.njk
+            - netlify.toml
+            - package.json
+            - page-list.njk
+            - product.njk
+            - robots.txt.njk
+            - sitemap.xml.njk
+            - tags-list.njk
+            - tags.njk
+            - .editorconfig
+            - .eleventyignore
+            - .gitignore
+            - .nvmrc
+            - LICENSE
+            - archive.njk
+            - blog_log.json
+            - social_log.json
+        source_files: []
+        children:
+            - blog_posts
+            - build_scripts
+            - ci_cd
+            - content_pages
+            - feed_generation
+            - shop_products
+            - site_templates
+        depends_on: []
+        related_to: []
+    blog_posts:
+        dir_name: Blog Posts Content Library
+        title: Blog Posts Content Library
+        scope:
+            - posts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: feed_generation
+    build_scripts:
+        dir_name: Content Generation & Social Publishing Automation
+        title: Content Generation & Social Publishing Automation
+        scope:
+            - scripts/
+            - blog_bot.py
+            - social_bot.py
+            - test_frontmatter.py
+            - verify_links.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ci_cd
+    ci_cd:
+        dir_name: GitHub Actions CI_CD & Automation Workflows
+        title: GitHub Actions CI/CD & Automation Workflows
+        scope:
+            - .github/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: build_scripts
+            - path: site_templates
+    content_pages:
+        dir_name: Static Content Pages & Site Data
+        title: Static Content Pages & Site Data
+        scope:
+            - page/
+            - _data/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    feed_generation:
+        dir_name: Feed & Product JSON Generators (Eleventy Templates)
+        title: Feed & Product JSON Generators (Eleventy Templates)
+        scope:
+            - feed/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: blog_posts
+            - path: shop_products
+    shop_products:
+        dir_name: Shop Product Catalog (Static Markdown)
+        title: Shop Product Catalog (Static Markdown)
+        scope:
+            - shop/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: feed_generation
+    site_templates:
+        dir_name: Eleventy Site Templates & Styles
+        title: Eleventy Site Templates & Styles
+        scope:
+            - _includes/
+            - css/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ci_cd

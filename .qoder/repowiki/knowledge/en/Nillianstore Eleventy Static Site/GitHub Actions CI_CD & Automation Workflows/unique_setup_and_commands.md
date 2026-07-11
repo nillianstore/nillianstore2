@@ -1,0 +1,1 @@
+Secrets must be configured in the repository settings before the bots run: `GROQ_API_KEY`, `META_ACCESS_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GITHUB_TOKEN`. The blog bot requires a full git clone (`fetch-depth: 0`) and writes back to the repo using `persist-credentials: true`.

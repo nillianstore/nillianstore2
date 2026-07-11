@@ -1,0 +1,1 @@
+Holds Eleventy Markdown pages and global JSON data that drive the site's static content, metadata, and template listings.

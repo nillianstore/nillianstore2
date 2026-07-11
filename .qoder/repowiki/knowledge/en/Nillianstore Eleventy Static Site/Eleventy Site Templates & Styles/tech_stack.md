@@ -1,0 +1,1 @@
+Eleventy Nunjucks templates (`*.njk`) with the `url` filter for asset paths; runtime dependencies loaded at build time include Bootstrap, Swiper 11 (CDN), Font Awesome 6.5, and Google Analytics gtag.js.

@@ -1,0 +1,1 @@
+CLI scripts that generate SEO blog posts from product Markdown via Groq, publish social-media content to Instagram/Facebook, and validate generated site artifacts.

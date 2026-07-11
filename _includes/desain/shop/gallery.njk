@@ -1,0 +1,49 @@
+<div class="product-gallery my-4">
+  {% if images and images.length > 1 %}
+    <!-- Swiper Carousel for Multiple Images -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for img in images %}
+          <div class="swiper-slide d-flex justify-content-center">
+            <img
+              src="{{ img }}"
+              alt="{{ title }} - Image {{ loop.index }}"
+              class="img-fluid rounded"
+              loading="lazy"
+              style="max-height: 500px; object-fit: contain;"
+            />
+          </div>
+        {% endfor %}
+      </div>
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  {% elif images and images.length == 1 %}
+    <!-- Single Image -->
+    <div class="text-center">
+      <img
+        src="{{ images[0] }}"
+        alt="{{ title }}"
+        class="img-fluid rounded"
+        loading="lazy"
+        style="max-height: 500px; object-fit: contain;"
+      />
+    </div>
+  {% elif cover %}
+    <!-- Fallback to old 'cover' field -->
+    <div class="text-center">
+      <img
+        src="{{ cover }}"
+        alt="{{ title }}"
+        class="img-fluid rounded"
+        loading="lazy"
+        style="max-height: 500px; object-fit: contain;"
+      />
+    </div>
+  {% else %}
+    <p class="text-muted">No image available</p>
+  {% endif %}
+</div>

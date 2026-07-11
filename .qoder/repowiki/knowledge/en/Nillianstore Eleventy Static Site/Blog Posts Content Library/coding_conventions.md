@@ -1,0 +1,6 @@
+- Every post begins with a YAML front-matter block declaring `title`, `description`, `cover`, `date`, `tags`, `layout: layouts/post.njk`, and `permalink` under `/posts/<slug>/`.
+- Posts are written in Markdown but embed inline HTML `<div>` blocks for images and CTA buttons rather than relying on Markdown-only formatting.
+- Each featured product section ends with a centered 'Buy on Amazon.ae' button linking to `https://www.amazon.ae/dp/<ASIN>` with `target="_blank" rel="noopener"`.
+- Product sections follow a fixed pattern: bolded product name, descriptive paragraph, a `💡 Why It Works:` callout block with bullet benefits, and a `👉 Perfect for:` usage line.
+- Article filenames use kebab-case slugs that mirror the `permalink` path and include year/location keywords (e.g. `2025`, `dubai`, `abu-dhabi`, `uae`).
+- Tags in front matter mix topic keywords with the literal `post` tag used for Eleventy filtering.

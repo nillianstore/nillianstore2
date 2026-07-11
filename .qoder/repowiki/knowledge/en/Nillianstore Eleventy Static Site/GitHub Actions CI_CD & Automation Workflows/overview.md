@@ -1,0 +1,1 @@
+GitHub Actions workflows that build the Eleventy site, auto-generate blog posts via a Python bot, and publish social media updates on schedule.

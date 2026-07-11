@@ -1,0 +1,4 @@
+- All generated URLs use the `safeSlug` filter (built on Eleventy's slug + entity stripping) so permalinks are Netlify-safe across posts, shop items, and tag pages.
+- Dates are formatted through the shared `readableDate` / `htmlDateString` / `isoDateTime` filters rather than ad-hoc formatting in templates.
+- Pages opt into output via tags (`post`, `shop`, `shops`) which are then excluded from public tag lists by `filterTagList`.
+- Layouts are referenced by alias (`layout: post` or `layout: shop`) instead of hard-coded include paths.

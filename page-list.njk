@@ -1,0 +1,13 @@
+---
+pagination:
+  data: collections.all
+  size: 1000
+  alias: entries
+title: Sitemap
+description : sitemap website detail
+layout: layouts/home.njk
+eleventyExcludeFromCollections: true
+noindex: true
+permalink: /page-list/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
+---
+{% include "pageslist.njk" %}

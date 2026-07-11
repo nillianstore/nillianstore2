@@ -1,0 +1,4 @@
+- Workflows declare explicit `permissions: contents: write` only when they commit/push changes, instead of relying on default permissions.
+- External secrets are passed through per-step `env:` blocks (e.g. `GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}`) rather than at the job level, keeping secret scope visible per step.
+- Jobs that need to push back to the repo checkout with `fetch-depth: 0` and `persist-credentials: true` so Git history is available for commit operations.
+- Scheduled workflows expose a `workflow_dispatch` trigger alongside their `cron` schedule so they can be run manually during development or debugging.

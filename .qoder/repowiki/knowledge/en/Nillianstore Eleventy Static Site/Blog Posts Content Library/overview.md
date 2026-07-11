@@ -1,0 +1,1 @@
+Static Markdown blog posts for the Nillian Store site, each a product-focused article with YAML front matter targeting UAE shoppers and linking to Amazon.ae listings.

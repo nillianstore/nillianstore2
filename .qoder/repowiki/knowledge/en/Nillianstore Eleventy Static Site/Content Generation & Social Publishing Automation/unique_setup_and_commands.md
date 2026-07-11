@@ -1,0 +1,1 @@
+Requires environment secrets `GROQ_API_KEY`, `META_ACCESS_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, and optionally `GITHUB_TOKEN`. Run `python blog_bot.py` / `python social_bot.py` from the repo root so relative `./shop` and `./posts` resolve correctly; run `node scripts/check-filenames.js` after `npm run build` so `_site/` exists.

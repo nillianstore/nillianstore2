@@ -1,0 +1,313 @@
+<title>{{ title or metadata.title }}</title>
+
+<!-- Meta Descriptions -->
+<meta name="description" content="{{ description or metadata.description }}">  
+<meta property="twitter:description" content="{{ description or metadata.description }}">
+<meta property="og:description" content="{{ description or metadata.description }}">
+
+<!-- Open Graph / Social -->
+<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:site_name" content="{{ metadata.title }}">
+
+{%- set ogType = "website" -%}
+{%- if tags and "shop" in tags -%}
+  {%- set ogType = "product" -%}
+{%- elif tags and ("post" in tags or "blog" in tags) -%}
+  {%- set ogType = "article" -%}
+{%- endif -%}
+
+<meta property="og:type" content="{{ ogType }}">
+<meta property="og:locale" content="{{metadata.locale}}">
+<meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
+<meta property="og:image" content="{{ site.url }}{{ cover or metadata.banner }}">
+
+<!-- Twitter -->
+<meta property="twitter:title" content="{{ title or metadata.title }}">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="{{metadata.tweet}}">
+<meta property="twitter:creator" content="{{metadata.tweet}}">
+<meta property="twitter:url" content="{{ site.url }}{{ page.url | url }}">
+<meta property="twitter:image" content="{{ site.url }}{{ cover or metadata.banner }}">
+<meta property="twitter:image:alt" content="{{ title or metadata.title }}">
+
+<!-- Facebook -->
+<meta property="facebook:title" content="{{ title or metadata.title }}">
+<meta property="facebook:image" content="{{ site.url }}{{ cover or metadata.banner }}">
+
+<!-- Robots -->
+{% if noindex %}
+<meta name="robots" content="noindex, nofollow" />
+{% else %}
+<meta content='index, follow' name='robots'/>
+{% endif %}
+
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="WH5yK5pEky5qND2FOW3_hvm3VlPkjRtV731y81BcsTc" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url | url }}" />
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="en-ae" href="{{ site.url }}{{ page.url | url }}" />
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url | url }}" />
+
+<!-- Schema.org Structured Data -->
+{% if tags and "shop" in tags %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ title }}",
+  "image": [
+    "{{ site.url }}{{ cover }}"
+    {%- if images -%}
+    {%- for img in images -%}
+    , "{{ site.url }}{{ img }}"
+    {%- endfor -%}
+    {%- endif -%}
+  ],
+  "description": "{{ description | sanitize }}",
+  "sku": "{{ ecwidId }}",
+  "mpn": "{{ ecwidId }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ brand or 'Nillianstore' }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ site.url }}{{ page.url | url }}",
+    "priceCurrency": "AED",
+    "price": {{ price | replace('AED', '') | replace(' ', '') | default(0) }},
+    "priceValidUntil": "2027-12-31",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ metadata.title }}",
+      "url": "{{ site.url }}"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "AE"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 5,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 15,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+}
+</script>
+{% elif tags and ("post" in tags or "blog" in tags) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }}",
+  "image": "{{ site.url }}{{ cover }}",
+  "datePublished": "{{ page.date | isoDateTime }}",
+  "dateModified": "{{ page.date | isoDateTime }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url | url }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}{{ metadata.icon }}"
+    }
+  },
+  "description": "{{ description | sanitize }}"
+}
+</script>
+{% else %}
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "OnlineStore"],
+  "name": "{{ metadata.title }}",
+  "legalName": "{{ metadata.business.legalName }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}{{ metadata.icon }}",
+  "description": "{{ metadata.description }}",
+  "email": "{{ metadata.author.email }}",
+  "telephone": "{{ metadata.business.telephone }}",
+  "foundingDate": "{{ metadata.business.foundingDate }}",
+  "currenciesAccepted": "{{ metadata.business.currenciesAccepted }}",
+  "paymentAccepted": "{{ metadata.business.paymentAccepted }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ metadata.business.streetAddress }}",
+    "addressLocality": "{{ metadata.business.addressLocality }}",
+    "addressRegion": "{{ metadata.business.addressRegion }}",
+    "addressCountry": "{{ metadata.business.addressCountry }}"
+  },
+  "sameAs": [
+    "{{ metadata.social.instagram }}",
+    "{{ metadata.social.facebook }}",
+    "{{ metadata.social.tiktok }}",
+    "{{ metadata.social.amazon }}"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Arab Emirates"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ metadata.business.telephone }}",
+    "email": "{{ metadata.author.email }}",
+    "contactType": "Customer Service",
+    "areaServed": "United Arab Emirates",
+    "availableLanguage": ["English", "Arabic"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ metadata.title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ metadata.description }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.title }}"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Curated Home Decor & Lifestyle Products",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ metadata.title }}",
+    "url": "{{ site.url }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Arab Emirates"
+  },
+  "description": "{{ metadata.description }}"
+}
+</script>
+{%- endif %}
+{% endif %}
+
+<!-- FAQ Schema -->
+{% if faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question | sanitize }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer | sanitize }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<!-- BreadcrumbList Schema -->
+{% if page.url != "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}/"
+    }
+    {%- if tags and "shop" in tags -%}
+    , {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Shop",
+      "item": "{{ site.url }}/shop/"
+    }
+    {%- if category -%}
+    , {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ category | capitalize }}",
+      "item": "{{ site.url }}/tags/{{ category | safeSlug }}/"
+    }
+    , {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "{{ title }}",
+      "item": "{{ site.url }}{{ page.url | url }}"
+    }
+    {%- else -%}
+    , {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ title }}",
+      "item": "{{ site.url }}{{ page.url | url }}"
+    }
+    {%- endif -%}
+    {%- elif tags and ("post" in tags or "blog" in tags) -%}
+    , {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ site.url }}/posts/"
+    }
+    , {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ title }}",
+      "item": "{{ site.url }}{{ page.url | url }}"
+    }
+    {%- else -%}
+    , {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ title or metadata.title }}",
+      "item": "{{ site.url }}{{ page.url | url }}"
+    }
+    {%- endif -%}
+  ]
+}
+</script>
+{% endif %}

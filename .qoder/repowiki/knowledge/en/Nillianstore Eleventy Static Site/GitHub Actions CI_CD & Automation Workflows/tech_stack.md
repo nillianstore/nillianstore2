@@ -1,0 +1,1 @@
+GitHub Actions runners (`ubuntu-latest`); Node.js 18 for Eleventy builds; Python 3.11 with `python-frontmatter` and `requests` for content generation and Meta/Facebook/Instagram API posting; Groq LLM API via `GROQ_API_KEY` secret.

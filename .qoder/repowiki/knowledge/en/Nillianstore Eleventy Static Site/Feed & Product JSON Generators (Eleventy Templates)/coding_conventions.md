@@ -1,0 +1,4 @@
+- Each template declares its output URL through a YAML front-matter `permalink` field rather than relying on filename-to-path conventions.
+- Every template opts out of collection indexing by setting `eleventyExcludeFromCollections: true` in its front matter.
+- Post and shop items are iterated with `{% for ... in collections.* | reverse %}` and filtered with `{%- if not item.data.draft %}` before emitting entries.
+- HTML content is sanitized for XML-safe output by piping through `striptags | xmlEncode` before embedding in `<content>` or JSON fields.

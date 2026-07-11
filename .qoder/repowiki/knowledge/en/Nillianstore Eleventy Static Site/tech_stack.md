@@ -1,0 +1,1 @@
+Eleventy 2.x with Nunjucks + markdown-it (anchor plugin) as the template engine; Luxon for date formatting; RSS/navigation/syntax-highlight plugins; built on Node.js and deployed to Netlify (per `netlify.toml`) with GitHub Actions CI.

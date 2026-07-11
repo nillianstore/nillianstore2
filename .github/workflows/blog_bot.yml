@@ -1,0 +1,52 @@
+name: Automated Blog Generation Bot
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install python-frontmatter requests
+
+      - name: Run Blog Bot
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python blog_bot.py
+
+      - name: Set up Node.js (for Eleventy validation)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Node dependencies & validate build
+        run: |
+          npm ci
+          npm run build
+          node scripts/check-filenames.js
+
+      - name: Commit and Push New Blog Post
+        run: |
+          git config --global user.name "nillianstore-bot"
+          git config --global user.email "nillianstore@gmail.com"
+          git add posts/*.md blog_log.json
+          git commit -m "Add automated blog post [skip ci]" || echo "No changes to commit"
+          git push

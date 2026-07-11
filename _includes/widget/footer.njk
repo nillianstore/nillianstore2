@@ -1,0 +1,99 @@
+<footer class="bg-light pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Brand & Description -->
+      <div class="col-md-4 mb-4">
+        <h5>
+          <strong><a href="{{ metadata.url }}" class="text-dark text-decoration-none">{{ metadata.title }}</a></strong>
+        </h5>
+        <p class="text-muted small">
+          Handpicked home decor & lifestyle products for UAE homes.<br>
+          Curated with care, delivered via Amazon.ae.
+        </p>
+        <!-- Trust Badges -->
+        <div class="d-flex flex-wrap mt-3" style="gap: 10px;">
+          <span class="badge bg-success text-white px-3 py-2">
+            <i class="fas fa-lock me-1"></i> SSL Secured
+          </span>
+          <span class="badge bg-warning text-dark px-3 py-2">
+            <i class="fab fa-amazon me-1"></i> Amazon Verified
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li class="mb-2">
+              <a href="{{ entry.url | url }}" class="text-decoration-none text-muted small">
+                {{ entry.title }}
+              </a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <!-- Policies -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Policies</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/privacy-policy/" class="text-decoration-none text-muted small">Privacy Policy</a></li>
+          <li class="mb-2"><a href="/terms-of-service/" class="text-decoration-none text-muted small">Terms of Service</a></li>
+          <li class="mb-2"><a href="/shipping-policy/" class="text-decoration-none text-muted small">Shipping Policy</a></li>
+          <li class="mb-2"><a href="/refund-policy/" class="text-decoration-none text-muted small">Refund & Return Policy</a></li>
+          <li class="mb-2"><a href="/contact/" class="text-decoration-none text-muted small">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Business Info -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Business Information</h6>
+        <address class="text-muted small mb-2">
+          <strong>Nillianstore</strong><br>
+          Abu Dhabi, United Arab Emirates<br>
+          <a href="mailto:{{ metadata.author.email }}" class="text-decoration-none text-muted">{{ metadata.author.email }}</a><br>
+          <a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored" class="text-decoration-none text-muted">
+            <i class="fab fa-amazon me-1"></i>Amazon.ae Storefront
+          </a>
+        </address>
+      </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="text-center mt-3 mb-3">
+      <p class="small text-muted mb-2">Follow Us & Shop</p>
+      <div class="d-flex justify-content-center" style="gap: 20px; font-size: 1.4em;">
+        <a href="https://www.instagram.com/nillianstore" target="_blank" rel="noopener nofollow" aria-label="Instagram" class="text-dark">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/17DyggcD7b/?mibextid=wwXIfr" target="_blank" rel="noopener nofollow" aria-label="Facebook" class="text-dark">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com/@nillianstore" target="_blank" rel="noopener nofollow" aria-label="TikTok" class="text-dark">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="mailto:nillianstore@gmail.com" aria-label="Email" class="text-dark">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.amazon.ae/s?me=A20X6G0BNN7WDJ&marketplaceID=A2VIGQ35RCS4UG" target="_blank" rel="noopener nofollow sponsored" aria-label="Shop on Amazon.ae" class="text-dark">
+          <i class="fab fa-amazon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-top pt-3 text-center">
+      <p class="text-muted small mb-1">
+        &copy; <script>document.write(new Date().getFullYear())</script> Nillianstore. All rights reserved.
+      </p>
+      <p class="text-muted small mb-0">
+        All purchases are securely processed through Amazon.ae with buyer protection.<br>
+        Prices are displayed in AED (UAE Dirham). Delivery available across the UAE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% include "widget/script.njk" %}

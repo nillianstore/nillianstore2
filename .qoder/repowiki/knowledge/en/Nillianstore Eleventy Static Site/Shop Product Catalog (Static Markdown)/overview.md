@@ -1,0 +1,1 @@
+Static product catalog for the Nillianstore shop, with one Markdown page per item and a shared Eleventy layout driving generated product pages.
