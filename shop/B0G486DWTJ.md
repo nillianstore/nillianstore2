@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G486DWTJ
-permalink: /shop/B0G486DWTJ/
+permalink: /shop/b0g486dwtj/
 date: 2025-10-29
 bullet_points:
   - "Adorable Coffee Cup Design: Super-soft plush with cheerful smiley face, fluffy 'foam' lid, and cozy ribbed sleeve—perfect for UAE coffee lovers and kawaii fans."

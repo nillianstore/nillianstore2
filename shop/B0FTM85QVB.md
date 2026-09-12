@@ -9,7 +9,7 @@ images:
   - /img/B0FTM85QVB-3.webp
   - /img/B0FTM85QVB-4.webp
 ecwidId: B0FTM85QVB
-category: Sport
+category: sport
 tags:
   - transparent padel racket protector
   - padel accessories UAE
@@ -22,7 +22,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0FTM85QVB
-permalink: /shop/B0FTM85QVB/
+permalink: /shop/b0ftm85qvb/
 date: 2025-10-21
 bullet_points:
   - "Perfect Fit: Precision-cut 370×34mm size ensures full edge coverage without interfering with your swing or control."

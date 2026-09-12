@@ -31,7 +31,7 @@ In the UAE, where hospitality and generosity are deeply rooted in the culture, *
 
 ---
 
-**[ Decorative Ceramic Serving Plate, Square 19 cm ](https://www.nillianstore.com/shop/B0F5NX1HKR/)**
+**[ Decorative Ceramic Serving Plate, Square 19 cm ](https://www.nillianstore.com/shop/b0f5nx1hkr/)**
 
 Our square 19cm decorative ceramic serving plate features a **vibrant red and blue mandala pattern**, adding a pop of color to your table. With **double handles** for easy carrying, it's designed to serve a variety of dishes, from hummus and labneh to nuts and sweets. **Crafted from high-quality ceramic** and finished with a **smooth, food-safe glaze**, this plate is both **microwave safe** and **easy to clean**.
 

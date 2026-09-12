@@ -27,7 +27,7 @@ In the UAE, where hospitality is a cornerstone of the culture, serving the perfe
 
 ---
 
-**[ Power King Large Glass Teapot - 1.5L ](https://www.nillianstore.com/shop/B0F3KHSF4V/)**
+**[ Power King Large Glass Teapot - 1.5L ](https://www.nillianstore.com/shop/b0f3khsf4v/)**
 
 The Power King Large Glass Teapot stands out with its **1.5L capacity**, making it an ideal choice for **tea-loving families** and **generous hosts** across the UAE. **Crafted from high-quality borosilicate glass**, this teapot is not only **durable** but also **resistant to direct stovetop heat and microwave use**, ensuring that it remains **clear and crack-free** even after repeated use. With a **price point of AED 45**, it's an affordable luxury for any UAE resident looking to elevate their tea experience.
 

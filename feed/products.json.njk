@@ -4,7 +4,7 @@ eleventyExcludeFromCollections: true
 ---
 {
   "products": [
-    {%- for item in collections.shop %}
+    {%- for item in collections.shops %}
       {
         "title": "{{ item.data.title }}",
         "description": "{{ item.data.description | striptags | xmlEncode }}",

@@ -28,7 +28,7 @@ In the vibrant cities of Dubai and Abu Dhabi, where modern lifestyle meets tradi
 
 ---
 
-**[ Cute Christmas Tree Night Light for Kids – Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/B0G4WF6D71/)**
+**[ Cute Christmas Tree Night Light for Kids – Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/b0g4wf6d71/)**
 
 The **Cute Christmas Tree Night Light** is more than just a holiday decoration; it's a **practical night light** that combines functionality with festive charm. Made from **soft, flexible silicone** in classic evergreen green, it features a glowing star top and textured branches that emit a gentle **2700K warm white light**, creating a magical ambiance in any nursery or bedroom.
 

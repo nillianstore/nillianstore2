@@ -25,7 +25,7 @@ The UAE, known for its vibrant cities like Dubai and Abu Dhabi, is a melting pot
 
 ---
 
-**[ Elegant Butterfly Table Lamp with 3-Color LED Light and USB Power ](https://www.nillianstore.com/shop/B0FXY99H9J/)**
+**[ Elegant Butterfly Table Lamp with 3-Color LED Light and USB Power ](https://www.nillianstore.com/shop/b0fxy99h9j/)**
 
 The Elegant Butterfly Table Lamp is a masterpiece of **premium acrylic** craftsmanship, featuring **lifelike wing detailing** that captures the essence of a butterfly in flight. With its **3-color LED light temperatures** (warm, cool, and natural white), this lamp is incredibly versatile, allowing you to **adjust the ambiance** of your room to suit your mood or activity. Whether you're looking to create a **warm and cozy** atmosphere for a relaxing evening in Dubai or a **bright and cool** space for a productive morning in Abu Dhabi, this lamp has got you covered.
 

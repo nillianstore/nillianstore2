@@ -27,7 +27,7 @@ The UAE lifestyle is known for its love of outdoor activities, and fishing is no
 
 ---
 
-**[ LYYP FISHING Size 12 Offset Hooks – Pre-Tied Rigs (3 Hooks/Pack, 2 Packs) – No Tying Needed, Multi-Ground Sharp Tip, 5.0kg Line Strength ](https://www.nillianstore.com/shop/B0GF88JJSR/)**
+**[ LYYP FISHING Size 12 Offset Hooks – Pre-Tied Rigs (3 Hooks/Pack, 2 Packs) – No Tying Needed, Multi-Ground Sharp Tip, 5.0kg Line Strength ](https://www.nillianstore.com/shop/b0gf88jjsr/)**
 
 The **LYYP FISHING Size 12 Offset Hooks** are the go-to choice for UAE anglers targeting **bass**, **panfish**, and **trout** with precision and ease. Each pack includes three expertly hand-tied size 12 offset (J-style) hooks on **5.0kg nylon line**, so you can skip the knot-tying and start catching from the first cast at **Al Qudra** or desert oases. The **offset shank** enhances natural bait movement and dramatically increases hook-up success, especially when using live bait or soft plastic lures.
 

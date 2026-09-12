@@ -32,10 +32,14 @@ def save_blog_history(product_id):
 
 def get_random_product():
     products = list(SHOP_DIR.glob("*.md"))
-    history = load_blog_history()
-    available = [p for p in products if p.stem not in history]
+    # Products already covered by an existing blog post (image or amazon link reference).
+    # File-based check (not just blog_log.json) so the bot never re-blogs a covered product.
+    posted = set()
+    for pf in POSTS_DIR.glob("*.md"):
+        posted.update(re.findall(r'(?:img/|amazon\.ae/dp/)(B0[A-Z0-9]{8})', pf.read_text(encoding="utf-8")))
+    available = [p for p in products if p.stem not in posted]
     if not available:
-        available = products
+        return None
     return random.choice(available)
 
 def slugify(text):
@@ -177,7 +181,7 @@ permalink: /posts/{slug}/
 
 ---
 
-**[ {product_data['title']} ](https://www.nillianstore.com/shop/{product_data['id']}/)**
+**[ {product_data['title']} ](https://www.nillianstore.com/shop/{product_data['id'].lower()}/)**
 
 {ai_content['product_section']}
 
@@ -214,6 +218,9 @@ def main():
 
     try:
         product_file = get_random_product()
+        if product_file is None:
+            print("Every shop product already has a blog post. Nothing to do.")
+            return
         post = frontmatter.load(product_file)
         
         # Get all images from frontmatter

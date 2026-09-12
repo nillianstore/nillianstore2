@@ -26,7 +26,7 @@ As the UAE continues to evolve, so do its home decor trends. In 2025, residents 
 
 ---
 
-**[ Double-Walled Glass Mug with Dried Flower Design - 350ml ](https://www.nillianstore.com/shop/B0F5MYQRY1/)**
+**[ Double-Walled Glass Mug with Dried Flower Design - 350ml ](https://www.nillianstore.com/shop/b0f5myqry1/)**
 
 The **Double-Walled Glass Mug with Dried Flower Design** is a masterpiece of **floral artistry** and **premium materials**. Encased between two layers of **heat-resistant borosilicate glass** are **real dried flowers**, creating a one-of-a-kind centerpiece for your daily coffee or tea ritual. With its **350ml capacity** and **lightweight design**, this mug is perfect for cozy mornings in Dubai high-rises or relaxed afternoons in Abu Dhabi villas.
 

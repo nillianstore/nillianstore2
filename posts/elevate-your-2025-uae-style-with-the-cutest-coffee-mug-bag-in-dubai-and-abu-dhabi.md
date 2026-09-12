@@ -28,7 +28,7 @@ The UAE is known for its vibrant lifestyle and stunning home decor trends. As we
 
 ---
 
-**[ Cute Coffee Mug Plush Crossbody Bag - Smiley Face, Adjustable Strap, Novelty Purse (Beige / Latte) ](https://www.nillianstore.com/shop/B0G487Z74X/)**
+**[ Cute Coffee Mug Plush Crossbody Bag - Smiley Face, Adjustable Strap, Novelty Purse (Beige / Latte) ](https://www.nillianstore.com/shop/b0g487z74x/)**
 
 The **Cute Coffee Mug Plush Crossbody Bag in Beige (Latte)** is a game-changer. Crafted from **ultra-soft, high-quality plush fabric**, this delightful bag mimics the look of a comforting latte, complete with a **fluffy 'foam' lid**, **sweet smiley face**, and **ribbed sleeve** that feels as good as it looks. With its **adjustable strap**, you can wear it comfortably across your body, perfect for a day out in Dubai Mall or a weekend brunch in Abu Dhabi.
 

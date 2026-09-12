@@ -22,7 +22,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0FY6P9NXV
-permalink: /shop/B0FY6P9NXV/
+permalink: /shop/b0fy6p9nxv/
 date: 2025-10-29
 bullet_points:
   - "Enchanting 60cm Butterfly Tree: Realistic birch-style trunk with hand-placed pastel butterflies in yellow, pink, and blue—perfect for UAE bedrooms and living rooms."

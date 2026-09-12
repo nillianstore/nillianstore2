@@ -7,9 +7,11 @@
 <div class="p-3 bg-light tag">
 Hastag: &nbsp;
 {%- for tag in tags | filterTagList -%}
+  {%- if tag in collections.tagList -%}
 {%- set tagUrl %}/tags/{{ tag | safeSlug }}/{% endset -%}
 <a href="{{ tagUrl | url }}" class="tag text-dark">#{{ tag }}&nbsp; </a>
-{%- endfor %}
+  {%- endif -%}
+{%- endfor -%}
 </div>
 <img class="img-fluid mt-3 mb-3 rounded" width="100%" height="100%" alt="{{title}}" src="{{cover}}"/>
 {{ content | safe }}

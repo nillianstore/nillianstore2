@@ -28,7 +28,7 @@ In the vibrant cities of the UAE, such as Dubai and Abu Dhabi, homeowners are co
 
 ---
 
-**[ Cute Cat Night Light for Kids – Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/B0G51DGGFZ/)**
+**[ Cute Cat Night Light for Kids – Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/b0g51dggfz/)**
 
 The **Cute Cat Night Light** is an adorable, functional, and safe lighting solution designed specifically for kids. Made from **soft, squeezable silicone**, this night light features a **gentle 2700K warm white LED light** that creates a soothing ambiance, perfect for helping little ones drift off to dreamland. With its **expressive eyes and perked ears**, this cat night light becomes more than just a lamp; it's a **loyal companion** that watches over your child throughout the night.
 

@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G51DGGFZ
-permalink: /shop/B0G51DGGFZ/
+permalink: /shop/b0g51dggfz/
 date: 2025-10-29
 bullet_points:
   - "Adorable Cat Design: Soft silicone cat with bright eyes and perked ears—perfect as a comforting companion in UAE nurseries and kids’ rooms."

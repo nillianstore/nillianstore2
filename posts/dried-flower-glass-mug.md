@@ -28,17 +28,17 @@ Whether you're sipping your morning coffee or enjoying a relaxing herbal tea, th
 
 ### Featured Products
 
-#### [Dried Flower Mug – 1 Piece](/shop/B0F5MYQRY1)
+#### [Dried Flower Mug – 1 Piece](/shop/b0f5myqry1)
 **Price:** AED 35  
 Elegant single glass mug with real dried flower insert. Ideal for personal use or thoughtful gifting.
 
-[View Details →](/shop/B0F5MYQRY1)
+[View Details →](/shop/b0f5myqry1)
 
-#### [Dried Flower Mug – 2 Pieces](/shop/B0F5MYQRY1)
+#### [Dried Flower Mug – 2 Pieces](/shop/b0f5myqry1)
 **Price:** AED 65  
 Double set of floral mugs for sharing or doubling the beauty in your home. A perfect gift for couples or friends.
 
-[View Details →](/shop/B0F5MYQRY1)
+[View Details →](/shop/b0f5myqry1)
 
 ### Why Choose Our Dried Flower Mugs?
 

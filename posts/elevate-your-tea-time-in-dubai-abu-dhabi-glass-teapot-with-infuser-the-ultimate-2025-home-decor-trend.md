@@ -28,7 +28,7 @@ The UAE is known for its vibrant lifestyle, and when it comes to home decor, res
 
 ---
 
-**[ Glass Teapot with Infuser - 750ml & 950ml Sizes ](https://www.nillianstore.com/shop/B0F3NNJC9C/)**
+**[ Glass Teapot with Infuser - 750ml & 950ml Sizes ](https://www.nillianstore.com/shop/b0f3nnjc9c/)**
 
 The Glass Teapot with Infuser, available in **750ml and 950ml sizes**, is crafted with **high-quality borosilicate glass**, making it **stovetop-safe** and **durable**. This teapot is designed to deliver a **pure and flavorful cup** of tea every time, whether you're enjoying **delicate jasmine pearls** or **herbal infusions**. With its **elegant design**, it's sure to be a **centerpiece** in any UAE home, perfect for **quiet mornings** or **entertaining guests**.
 

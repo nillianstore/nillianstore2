@@ -9,7 +9,7 @@ images:
   - /img/B0GF88JJSR-3.webp
   - /img/B0GF88JJSR-4.webp
 ecwidId: B0GF88JJSR
-category: Sport
+category: sport
 tags:
   - offset fishing hook UAE
   - j hook rig Dubai
@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0GF88JJSR
-permalink: /shop/B0GF88JJSR/
+permalink: /shop/b0gf88jjsr/
 date: 2025-12-26
 bullet_points:
   - "No Tie Required: 2 packs (6 total) of pre-tied size 12 offset hooks cast immediately in UAE freshwater spots."

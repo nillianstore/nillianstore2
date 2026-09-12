@@ -28,7 +28,7 @@ In the heart of the UAE, where **modern living meets traditional charm**, home d
 
 ---
 
-**[ Akebonno French Press Coffee Maker - 600ml ](https://www.nillianstore.com/shop/B0F92TDH2H/)**
+**[ Akebonno French Press Coffee Maker - 600ml ](https://www.nillianstore.com/shop/b0f92tdh2h/)**
 
 The Akebonno 600ml French Press is **crafted for discerning coffee lovers** across the UAE. Whether you're brewing your morning cup in a Dubai apartment, enjoying a quiet moment in Abu Dhabi, or camping under the stars in Al Ain, this elegant press delivers **rich, full-flavored coffee** with zero paper waste and maximum aroma. Made with **high-grade borosilicate glass** and a **precision-engineered stainless steel filter**, the Akebonno French Press ensures a clean, great-tasting coffee experience.
 

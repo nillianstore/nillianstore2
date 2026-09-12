@@ -21,7 +21,7 @@ tags:
   - coffee lovers gift
   - shop
 layout: layouts/shop.njk
-amazonLink: https://www.amazon.ae/dp/B0F9F6HZRR/
+amazonLink: https://www.amazon.ae/dp/B0F9F6HZRR
 permalink: /shop/b0f92tdh2h/
 date: 2025-07-01
 bullet_points:

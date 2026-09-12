@@ -9,7 +9,7 @@ images:
   - /img/B0G2R2JSZ9-3.webp
   - /img/B0G2R2JSZ9-4.webp
 ecwidId: B0G2R2JSZ9
-category: Sport
+category: sport
 tags:
   - clear padel protector UAE
   - smooth edge guard Dubai
@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G2R2JSZ9
-permalink: /shop/B0G2R2JSZ9/
+permalink: /shop/b0g2r2jsz9/
 date: 2025-10-29
 bullet_points:
   - "Invisible TPU Shield: Crystal-clear, smooth protector preserves your racket’s original look—perfect for UAE players who value clean aesthetics."

@@ -27,7 +27,7 @@ In the UAE, where modern lifestyles and traditional values blend, home decor tre
 
 ---
 
-**[ Cute CUCKOO Chick Night Light for Kids – Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/B0G517CVNW/)**
+**[ Cute CUCKOO Chick Night Light for Kids – Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/b0g517cvnw/)**
 
 The **Cute CUCKOO Chick Night Light** is designed with **ultra-soft, non-toxic silicone**, making it safe for children to touch and handle. Its **cheerful yellow body** and **wide-eyed expression** are instantly appealing, turning bedtime into a positive experience. This adorable chick night light emits a **gentle 2700K warm white glow**, perfect for **calming fussy babies**, **easing bedtime fears**, or providing **soft illumination during late-night feedings**. Being **USB rechargeable**, it offers convenience and portability, making it a **must-have** for any nursery or kid's bedroom in the UAE.
 

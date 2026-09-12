@@ -83,7 +83,8 @@
 
   <!-- 4. Tags Line (White Text, Black Background) -->
 <div class="mb-4 p-2 bg-dark text-white rounded d-inline-flex flex-wrap" style="gap: 0.5rem;">
-  {% for tag in tags %}
+  {% for tag in tags | filterTagList %}
+    {% if tag in collections.tagList %}
     <a
       href="/tags/{{ tag | safeSlug }}/"
       class="text-white text-decoration-none px-2 py-1"
@@ -91,6 +92,7 @@
     >
       #{{ tag }}
     </a>
+    {% endif %}
   {% endfor %}
 </div>
 

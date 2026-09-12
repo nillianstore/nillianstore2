@@ -72,26 +72,30 @@ module.exports = function (eleventyConfig) {
   // ✅ Collections
   // Create a collection for all shop products
 eleventyConfig.addCollection("tagList", function(collection) {
-  const tagMap = new Map();
+  const IGNORED = ["all", "nav", "post", "posts", "shop", "shops"];
+  const counts = new Map(); // raw tag -> number of shop products carrying it
 
   collection.getAll().forEach(item => {
     if (!item.data.tags) return;
-
-    let tags = item.data.tags;
-    if (typeof tags === "string") tags = [tags];
-
+    const tags = Array.isArray(item.data.tags) ? item.data.tags : [item.data.tags];
+    if (!tags.includes("shops")) return; // products only
     tags.forEach(tag => {
-      // Use safeSlug here so the collection keys match the sanitized permalinks
-      const slug = eleventyConfig.getFilter("safeSlug")(tag);
-      if (!tagMap.has(slug)) {
-        tagMap.set(slug, tag);
-      }
+      if (IGNORED.includes(tag)) return;
+      counts.set(tag, (counts.get(tag) || 0) + 1);
     });
   });
 
-  return Array.from(tagMap.values()).filter(
-    tag => !["all", "nav", "post", "posts", "shop", "shops"].includes(tag)
-  );
+  // Only tags shared by at least 2 products get a page (kills ~286 thin tag pages)
+  const seen = new Set();
+  return Array.from(counts.entries())
+    .filter(([, n]) => n >= 2)
+    .map(([tag]) => tag)
+    .filter(tag => {
+      const slug = eleventyConfig.getFilter("safeSlug")(tag);
+      if (seen.has(slug)) return false;
+      seen.add(slug);
+      return true;
+    });
 });
 
 
@@ -100,7 +104,6 @@ eleventyConfig.addCollection("tagList", function(collection) {
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('robots.txt');
-  eleventyConfig.addPassthroughCopy('feed');
   eleventyConfig.addPassthroughCopy('videos');
   eleventyConfig.addPassthroughCopy('_headers');
 

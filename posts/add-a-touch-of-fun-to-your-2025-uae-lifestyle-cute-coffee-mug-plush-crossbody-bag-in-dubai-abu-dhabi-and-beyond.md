@@ -26,7 +26,7 @@ The UAE is known for its vibrant lifestyle, and when it comes to home decor and 
 
 ---
 
-**[ Cute Coffee Mug Plush Crossbody Bag - Smiley Face, Adjustable Strap, Novelty Purse (Light Pink) ](https://www.nillianstore.com/shop/B0G486DWTJ/)**
+**[ Cute Coffee Mug Plush Crossbody Bag - Smiley Face, Adjustable Strap, Novelty Purse (Light Pink) ](https://www.nillianstore.com/shop/b0g486dwtj/)**
 
 The **Cute Coffee Mug Plush Crossbody Bag** is an irresistibly adorable accessory designed to look just like your favorite latte cup! Crafted from super-soft, high-quality plush fabric, this compact bag features a sweet **smiley face**, a fluffy **'foam' lid**, and a cozy **ribbed sleeve** that makes it as fun to carry as it is to look at. Available in light pink, this novelty purse is perfect for adding a dash of joy to your everyday look.
 

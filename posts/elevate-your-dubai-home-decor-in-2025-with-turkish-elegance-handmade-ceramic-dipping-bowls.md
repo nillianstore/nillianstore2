@@ -26,7 +26,7 @@ As the UAE continues to evolve as a hub of cultural diversity and sophistication
 
 ---
 
-**[ Set of 2 Handmade Ceramic Dipping Bowls - Turkish Style (8cm x 4cm) ](https://www.nillianstore.com/shop/B0FCD6DD3N/)**
+**[ Set of 2 Handmade Ceramic Dipping Bowls - Turkish Style (8cm x 4cm) ](https://www.nillianstore.com/shop/b0fcd6dd3n/)**
 
 Our **Set of 2 Handmade Ceramic Dipping Bowls - Turkish Style** is a stunning example of Anatolian artistry brought right to your doorstep. Each bowl, measuring 8cm x 4cm, is meticulously **hand-painted with traditional motifs** and made from **high-quality glazed ceramic**, ensuring durability and ease of cleaning. Whether you're looking to serve mezze, organize your jewelry, or simply add a **pop of color** to your kitchen shelf or coffee table, these bowls are the perfect addition to any UAE home.
 

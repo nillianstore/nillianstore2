@@ -9,7 +9,7 @@ images:
   - /img/B0FXY99H9J-3.webp
   - /img/B0FXY99H9J-4.webp
 ecwidId: B0FXY99H9J
-category: Lighting
+category: lighting
 tags:
   - butterfly lamp UAE
   - usb table lamp Dubai
@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0FXY99H9J  
-permalink: /shop/B0FXY99H9J/
+permalink: /shop/b0fxy99h9j/
 date: 2025-10-27
 bullet_points:
   - "Enchanting Butterfly Design High-quality acrylic wings with delicate vein detailing emit a soft, magical glow-perfect for UAE bedrooms and vanity spaces."

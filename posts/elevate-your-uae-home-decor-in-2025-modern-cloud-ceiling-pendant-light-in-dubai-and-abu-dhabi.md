@@ -27,7 +27,7 @@ In the UAE, where modernity meets tradition, home decor trends are constantly ev
 
 ---
 
-**[ Modern Cloud Ceiling Pendant Light – Cotton Decorative Lamp — Deploy test ](https://www.nillianstore.com/shop/B0CLHGCYRN/)**
+**[ Modern Cloud Ceiling Pendant Light – Cotton Decorative Lamp — Deploy test ](https://www.nillianstore.com/shop/b0clhgcyrn/)**
 
 The **Modern Cloud Ceiling Pendant Light** is a stunning cotton decorative lamp that floats gracefully from your ceiling, casting a **soft, gentle glow** that soothes the senses and sparks imagination. Crafted from **high-quality, lightweight cotton** with a **fire-resistant treatment**, this pendant combines **safety and artistry**. Its **organic, fluffy texture** mimics real clouds, creating a magical ambiance in any space.
 

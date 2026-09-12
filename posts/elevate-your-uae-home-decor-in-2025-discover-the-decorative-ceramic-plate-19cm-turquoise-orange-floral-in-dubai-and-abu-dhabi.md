@@ -27,7 +27,7 @@ In the UAE, where modernity meets tradition, home decor trends are constantly ev
 
 ---
 
-**[ Decorative Ceramic Plate - 19cm Turquoise & Orange Floral ](https://www.nillianstore.com/shop/B0F6LXG2NF/)**
+**[ Decorative Ceramic Plate - 19cm Turquoise & Orange Floral ](https://www.nillianstore.com/shop/b0f6lxg2nf/)**
 
 Our **19cm Decorative Ceramic Plate** in Turquoise and Orange Floral is a stunning example of **Anatolian craftsmanship**, blending **bold colors** and **intricate patterns** to create a truly eye-catching piece. **Hand-painted** with precision and finished in a **luminous high-gloss glaze**, this plate is not only a work of art but also a functional item that can be used to serve dishes or as a decorative accent.
 

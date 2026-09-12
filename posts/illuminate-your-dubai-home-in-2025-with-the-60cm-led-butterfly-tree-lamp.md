@@ -27,7 +27,7 @@ In the vibrant cities of the UAE, such as Dubai and Abu Dhabi, homeowners are co
 
 ---
 
-**[ 60cm LED Butterfly Tree Lamp – Warm White 2700K Fairy Lights with Pastel Butterflies (Yellow, Pink, Blue) – USB or Battery Powered – Birch Trunk Design ](https://www.nillianstore.com/shop/B0FY6P9NXV/)**
+**[ 60cm LED Butterfly Tree Lamp – Warm White 2700K Fairy Lights with Pastel Butterflies (Yellow, Pink, Blue) – USB or Battery Powered – Birch Trunk Design ](https://www.nillianstore.com/shop/b0fy6p9nxv/)**
 
 The **60cm LED Butterfly Tree Lamp** is a masterpiece of design, combining a **lifelike birch-style trunk** with **hand-placed butterflies** in soft pastel shades of yellow, pink, and blue. At the heart of each butterfly, **warm white 2700K LEDs** emit a **gentle, flicker-free glow**, transforming any space into a peaceful sanctuary. This enchanting lamp can be powered either via **USB or battery**, offering flexibility and convenience.
 

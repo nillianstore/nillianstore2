@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G4WHJX6S
-permalink: /shop/B0G4WHJX6S/
+permalink: /shop/b0g4whjx6s/
 date: 2025-10-29
 bullet_points:
   - "Magical Unicorn Design: Soft pastel silicone unicorn with spiral horn and flowing mane—perfect for dreamy UAE nurseries and kids’ rooms."

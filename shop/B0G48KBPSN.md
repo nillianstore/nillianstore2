@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G48KBPSN
-permalink: /shop/B0G48KBPSN/
+permalink: /shop/b0g48kbpsn/
 date: 2025-10-29
 bullet_points:
   - "Authentic Khayameya Craftsmanship: Traditional Egyptian textile art featuring intricate Islamic geometric patterns in vibrant red, blue, green, and white—perfect for UAE Ramadan celebrations."

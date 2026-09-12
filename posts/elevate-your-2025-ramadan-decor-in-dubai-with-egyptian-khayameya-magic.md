@@ -26,7 +26,7 @@ In the vibrant cities of the UAE, such as Dubai and Abu Dhabi, residents take gr
 
 ---
 
-**[ Egyptian Khayameya Ramadan Tablecloth – Traditional Islamic Pattern, Red & Blue Geometric Design with Gold Trim ](https://www.nillianstore.com/shop/B0G48KBPSN/)**
+**[ Egyptian Khayameya Ramadan Tablecloth – Traditional Islamic Pattern, Red & Blue Geometric Design with Gold Trim ](https://www.nillianstore.com/shop/b0g48kbpsn/)**
 
 The **Egyptian Khayameya Ramadan Tablecloth** is a breathtaking fusion of heritage and elegance. Inspired by centuries-old Islamic textile traditions, this decorative table cover features a bold **red base** intricately embroidered with **royal blue**, **emerald green**, and **white geometric patterns**, all arranged in perfect symmetry to reflect the spiritual harmony of Ramadan. Available for **AED 50**, this tablecloth is not only a piece of art but also an affordable way to bring a touch of authentic Egyptian culture into your UAE home.
 
@@ -48,7 +48,7 @@ The **Egyptian Khayameya Ramadan Tablecloth** is a breathtaking fusion of herita
 
 <div style="text-align: center; margin: 1.5rem 0;">
   <a
-    href="https://www.amazon.ae/dp/B0G48P25Y4"
+    href="https://www.amazon.ae/dp/B0G48KBPSN"
     target="_blank"
     rel="noopener"
     class="btn btn-lg px-4"

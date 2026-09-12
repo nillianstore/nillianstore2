@@ -1,3 +1,76 @@
 [build]
   publish = "_site"
   command = "DEBUG=* eleventy"
+
+# Old shop-listing permalink moved from /shops/ to /shop/
+[[redirects]]
+  from = "/shops/"
+  to = "/shop/"
+  status = 301
+[[redirects]]
+  from = "/shops"
+  to = "/shop/"
+  status = 301
+
+# Product permalinks lowercased in the SEO migration - explicit 301s for the
+# 15 URLs that still had uppercase permalinks in the last deploy.
+[[redirects]]
+  from = "/shop/B0FTM85QVB/"
+  to = "/shop/b0ftm85qvb/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0FXY99H9J/"
+  to = "/shop/b0fxy99h9j/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0FY6P9NXV/"
+  to = "/shop/b0fy6p9nxv/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G2LKSCGR/"
+  to = "/shop/b0g2lkscgr/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G2R2JSZ9/"
+  to = "/shop/b0g2r2jsz9/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G486DWTJ/"
+  to = "/shop/b0g486dwtj/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G487Z74X/"
+  to = "/shop/b0g487z74x/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G48KBPSN/"
+  to = "/shop/b0g48kbpsn/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G4HLRC97/"
+  to = "/shop/b0g4hlrc97/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G4WF6D71/"
+  to = "/shop/b0g4wf6d71/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G4WHJX6S/"
+  to = "/shop/b0g4whjx6s/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G517CVNW/"
+  to = "/shop/b0g517cvnw/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0G51DGGFZ/"
+  to = "/shop/b0g51dggfz/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0GF88JJSR/"
+  to = "/shop/b0gf88jjsr/"
+  status = 301
+[[redirects]]
+  from = "/shop/B0GF8HJRBW/"
+  to = "/shop/b0gf8hjrbw/"
+  status = 301

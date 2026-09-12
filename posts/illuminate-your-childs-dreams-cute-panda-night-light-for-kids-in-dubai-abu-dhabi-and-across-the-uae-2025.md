@@ -28,7 +28,7 @@ In the vibrant cities of the UAE, such as Dubai and Abu Dhabi, where modern life
 
 ---
 
-**[ Cute Panda Night Light for Kids - Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/B0G4HLRC97/)**
+**[ Cute Panda Night Light for Kids - Soft Silicone Touch Sensor, USB Rechargeable, Warm White LED Bedside Lamp ](https://www.nillianstore.com/shop/b0g4hlrc97/)**
 
 The **Cute Panda Night Light** is a **gentle, huggable companion** that is specifically designed for kids. It features a **soft, calming glow** thanks to its **warm white 2700K LED**, which not only reduces the fear of the dark but also creates a **cozy atmosphere** perfect for bedtime. Crafted from **non-toxic, BPA-free soft silicone**, its **squishy, shatterproof body** is safe for toddlers to hug, hold, or carry, making it an ideal addition to any nursery in Dubai, Abu Dhabi, or Sharjah.
 

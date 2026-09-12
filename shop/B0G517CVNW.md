@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G517CVNW
-permalink: /shop/B0G517CVNW/
+permalink: /shop/b0g517cvnw/
 date: 2025-10-29
 bullet_points:
   - "Adorable CUCKOO Chick Design: Bright yellow soft silicone chick with round eyes and tiny beak—ideal as a cheerful bedtime buddy in UAE kids’ rooms."

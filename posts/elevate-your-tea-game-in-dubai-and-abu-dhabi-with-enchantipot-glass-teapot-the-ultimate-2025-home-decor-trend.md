@@ -29,7 +29,7 @@ In the UAE, where luxury and innovation meet, home decor trends are constantly e
 
 ---
 
-**[ Enchantipot Glass Teapot, 750ml, Built-in Automatic Tea Infuser ](https://www.nillianstore.com/shop/B0FJ7K4G48/)**
+**[ Enchantipot Glass Teapot, 750ml, Built-in Automatic Tea Infuser ](https://www.nillianstore.com/shop/b0fj7k4g48/)**
 
 The **Enchantipot Glass Teapot** is a masterpiece of design and functionality. Crafted from **premium borosilicate glass**, this **stovetop-safe** teapot features a **built-in automatic tea infuser** that rises when your tea reaches perfect strength, preventing bitterness and delivering consistent flavor every time. With its **750ml capacity**, it's perfect for sharing with friends and family or enjoying a quiet moment of solitude.
 

@@ -9,7 +9,7 @@ images:
   - /img/B0G2LKSCGR-3.webp
   - /img/B0G2LKSCGR-4.webp
 ecwidId: B0G2LKSCGR
-category: Sport
+category: sport
 tags:
   - zigzag padel protector
   - padel edge guard UAE
@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G2LKSCGR
-permalink: /shop/B0G2LKSCGR/
+permalink: /shop/b0g2lkscgr/
 date: 2025-10-29
 bullet_points:
   - "Zigzag Grip Design: 400mm x 65mm transparent edge guard enhances frame traction while fully protecting against wall scrapes—ideal for UAE padel courts."

@@ -29,17 +29,17 @@ To get the most from your detox routine, selecting the right teaware is essentia
 
 ### Featured Products
 
-#### [Glass Teapot 1.5L](/shop/B0F3KHSF4V)
+#### [Glass Teapot 1.5L](/shop/b0f3khsf4v)
 **Price:** AED 30  
 Ideal for loose-leaf detox teas, this 1.5L glass teapot combines elegance and function with a removable infuser and heat-resistant handle, perfect for the UAE's tea lovers.
 
-[View Details →](/shop/B0F3KHSF4V)
+[View Details →](/shop/b0f3khsf4v)
 
-#### [Teapot with Infuser](/shop/B0F3NNJC9C)
+#### [Teapot with Infuser](/shop/b0f3nnjc9c)
 **Price:** AED 30  
 Crafted with a stainless steel infuser for easy brewing, this teapot is designed to bring out the best flavors in your detox teas, with a modern aesthetic suitable for any kitchen.
 
-[View Details →](/shop/B0F3NNJC9C)
+[View Details →](/shop/b0f3nnjc9c)
 
 ### Tips to Maximize Your Detox Experience
 

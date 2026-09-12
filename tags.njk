@@ -5,7 +5,21 @@ pagination:
   alias: tag
 layout: layouts/home.njk
 eleventyComputed:
-  title: Tagged “{{ tag }}”
+  title: '{{ tag }} products in the UAE'
+  description: 'Shop {{ tag | capitalize }} and related handpicked products for UAE homes, delivered by Amazon.ae.'
 permalink: /tags/{{ tag | safeSlug }}/
 ---
-{% include "widget/tag.njk" %}
+{% set tagItems = collections[tag] | rejectattr("data", "draft") %}
+<div class="container py-4">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb small">
+      <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{{ '/shop/' | url }}">Shop</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ tag }}</li>
+    </ol>
+  </nav>
+  <h1 class="mb-2">{{ tag | capitalize }} in the UAE</h1>
+  <p class="text-muted mb-4">{{ tagItems | length }} product{{ 's' if tagItems | length != 1 }} curated for UAE homes &mdash; delivered by Amazon.ae.</p>
+  {% set shopslist = tagItems %}
+  {% include "shopslist.njk" %}
+</div>

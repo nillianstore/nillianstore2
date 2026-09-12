@@ -26,7 +26,7 @@ The UAE is known for its vibrant lifestyle and love for sports, with padel being
 
 ---
 
-**[ Transparent Padel Racket Protector ](https://www.nillianstore.com/shop/B0FTM85QVB/)**
+**[ Transparent Padel Racket Protector ](https://www.nillianstore.com/shop/b0ftm85qvb/)**
 
 The Transparent Padel Racket Protector is an **ultra-thin** and **crystal-clear** edge guard designed specifically for serious players. Engineered with **innovative Micro Grid technology**, this protector **absorbs shock** from aggressive shots and court impacts, providing **unparalleled protection** for your racket without altering its performance or aesthetics.
 

@@ -21,7 +21,7 @@ tags:
   - shop
 layout: layouts/shop.njk
 amazonLink: https://www.amazon.ae/dp/B0G4HLRC97
-permalink: /shop/B0G4HLRC97/
+permalink: /shop/b0g4hlrc97/
 date: 2025-10-29
 bullet_points:
   - "Adorable Panda Design: Soft silicone body with sleepy eyes and rosy cheeks - ideal as a comforting companion in UAE nurseries and kids' rooms."
