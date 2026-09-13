@@ -36,6 +36,12 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'Asia/Dubai' }).toISO();
   });
 
+  // Future expiry (now + 90d) for schema.org priceValidUntil
+  eleventyConfig.addFilter('priceValidUntil', (d) => {
+    const base = d ? DateTime.fromJSDate(d) : DateTime.utc();
+    return base.plus({ days: 90 }).toISODate();
+  });
+
   eleventyConfig.addFilter('head', (array, n) => {
     if (n < 0) return array.slice(n);
     return array.slice(0, n);

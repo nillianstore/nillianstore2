@@ -78,7 +78,7 @@
     "url": "{{ site.url }}{{ page.url | url }}",
     "priceCurrency": "AED",
     "price": {{ price | replace('AED', '') | replace(' ', '') | default(0) }},
-    "priceValidUntil": "2027-12-31",
+    "priceValidUntil": "{{ now | priceValidUntil }}",
     "availability": "https://schema.org/InStock",
     "itemCondition": "https://schema.org/NewCondition",
     "seller": {
@@ -148,6 +148,27 @@
 }
 </script>
 {% else %}
+{%- if page.url == "/shop/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "All Nillianstore Products",
+  "description": "Every product in the Nillianstore catalogue: home decor, tea accessories, kids' lighting and lifestyle items, all purchasable on Amazon.ae.",
+  "numberOfItems": {{ collections.shops | length }},
+  "itemListElement": [
+    {%- for item in collections.shops -%}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ site.url }}{{ item.url | url }}",
+      "name": "{{ item.data.title }}"
+    }{% if not loop.last %},{% endif %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{% endif %}
 {%- if page.url == "/" %}
 <script type="application/ld+json">
 {
@@ -186,7 +207,7 @@
     "email": "{{ metadata.author.email }}",
     "contactType": "Customer Service",
     "areaServed": "United Arab Emirates",
-    "availableLanguage": ["English", "Arabic"]
+    "availableLanguage": ["English"]
   }
 }
 </script>
@@ -218,6 +239,19 @@
     "name": "United Arab Emirates"
   },
   "description": "{{ metadata.description }}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Shop Nillianstore's UAE Home & Lifestyle Collection",
+  "description": "Meet the handpicked home decor, tea accessories and kids' lighting range from Nillianstore — delivered across Dubai, Abu Dhabi and Sharjah via Amazon.ae.",
+  "contentUrl": "{{ site.url }}/videos/CTAdesktop.mp4",
+  "uploadDate": "2026-01-01",
+  "duration": "PT15S",
+  "embedUrl": "{{ site.url }}/",
+  "publishDate": "2026-01-01"
 }
 </script>
 {%- endif %}
