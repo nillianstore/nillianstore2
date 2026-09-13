@@ -1,6 +1,7 @@
 [build]
   publish = "_site"
   command = "DEBUG=* eleventy"
+  node_version = "20"
 
 # Blog listing moved from /archive/ to /posts/
 [[redirects]]

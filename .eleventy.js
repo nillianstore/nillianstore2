@@ -135,9 +135,13 @@ eleventyConfig.addCollection("tagList", function(collection) {
 
   // ✅ Zero-CLS image transform: inject real width/height into any <img> that
   // lacks them (markdown-inlined product images). Cache dimensions per file.
-  const sharp = require('sharp');
+  // Loads lazily + defensively: if sharp can't load (old Node etc.) the build
+  // still succeeds — the transform just becomes a no-op.
+  let sharp = null;
+  try { sharp = require('sharp'); } catch (e) { console.warn('[eleventy] sharp unavailable, skipping image-dimensions transform:', e.message); }
   const imgDimCache = {};
   const getImageDims = (relPath) => {
+    if (!sharp) return null;
     try {
       const p = relPath.replace(/^\//, '').replace(/^\.\//, '');
       if (!(p in imgDimCache)) {
