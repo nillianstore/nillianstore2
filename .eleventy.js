@@ -1,5 +1,6 @@
 const { DateTime } = require('luxon');
 const fs = require('fs');
+const path = require('path');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginNavigation = require('@11ty/eleventy-navigation');
@@ -131,6 +132,35 @@ eleventyConfig.addCollection("tagList", function(collection) {
   eleventyConfig.addPassthroughCopy('robots.txt');
   eleventyConfig.addPassthroughCopy('videos');
   eleventyConfig.addPassthroughCopy('_headers');
+
+  // ✅ Zero-CLS image transform: inject real width/height into any <img> that
+  // lacks them (markdown-inlined product images). Cache dimensions per file.
+  const sharp = require('sharp');
+  const imgDimCache = {};
+  const getImageDims = (relPath) => {
+    try {
+      const p = relPath.replace(/^\//, '').replace(/^\.\//, '');
+      if (!(p in imgDimCache)) {
+        const f = path.join(__dirname, 'img', p.replace(/^img\//, ''));
+        const fs = require('fs');
+        imgDimCache[p] = fs.existsSync(f) ? sharp(f).metadata().then(m => [m.width, m.height]) : null;
+      }
+      return imgDimCache[p]; // may be a Promise
+    } catch (e) { return null; }
+  };
+  eleventyConfig.addTransform('img-dimensions', async (content) => {
+    if (!content || content.indexOf('<img') === -1) return content;
+    const tags = content.match(/<img\s[^>]*>/gi) || [];
+    for (const tag of tags) {
+      if (/\swidth=/i.test(tag) && /\sheight=/i.test(tag)) continue;
+      const m = tag.match(/\ssrc="([^"]+)"/i);
+      if (!m || !m[1].startsWith('/img/')) continue;
+      const dims = await getImageDims(m[1]);
+      if (!dims) continue;
+      content = content.replace(tag, tag.replace(/<img/i, `<img width="${dims[0]}" height="${dims[1]}"`));
+    }
+    return content;
+  });
 
   // ✅ Markdown library
   let markdownLibrary = markdownIt({

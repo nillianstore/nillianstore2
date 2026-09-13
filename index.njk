@@ -30,7 +30,7 @@ layout: layouts/home.njk
         <div class="hero-collage">
           {% for p in heroProducts %}
           <a href="{{ p.url | url }}" class="hc-tile" style="--i: {{ loop.index }}">
-            {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}" loading="lazy" width="400" height="400"/>{% endif %}
+            {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}"{% if loop.index0 >= 3 %} loading="lazy" decoding="async"{% else %} fetchpriority="high"{% endif %} width="400" height="400"/>{% endif %}
           </a>
           {% endfor %}
         </div>

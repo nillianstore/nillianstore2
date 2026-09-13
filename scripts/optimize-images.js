@@ -26,7 +26,7 @@ function isLogo(name) {
   return name.toLowerCase() === 'eleventy.png';
 }
 
-async function optimizeImage(filePath, filename) {
+async function optimizeImage(filename) {
   const fullPath = path.join(IMG_DIR, filename);
   const stat = fs.statSync(fullPath);
   const originalSizeKB = Math.round(stat.size / 1024);
@@ -45,36 +45,29 @@ async function optimizeImage(filePath, filename) {
   }
 
   try {
-    const image = sharp(fullPath);
-    const metadata = await image.metadata();
-    
+    // Read once into a buffer: avoids repeated file handles that race with
+    // Windows antivirus/lockers during sequential processing.
+    const input = fs.readFileSync(fullPath);
+    const meta = await sharp(input).metadata();
+    const width = meta.width, height = meta.height;
+
     // Skip if already small enough
-    if (metadata.width <= maxSize && metadata.height <= maxSize && originalSizeKB < 50) {
-      console.log(`  SKIP  ${filename} (${metadata.width}x${metadata.height}, ${originalSizeKB}KB) - already optimized`);
+    if (width <= maxSize && height <= maxSize && originalSizeKB < 50) {
+      console.log(`  SKIP  ${filename} (${width}x${height}, ${originalSizeKB}KB) - already optimized`);
       return { filename, skipped: true, originalSizeKB };
     }
 
-    const tempPath = fullPath + '.tmp';
-
-    if (isWebp) {
-      const buffer = await image
-        .resize(maxSize, maxSize, { fit: 'inside', withoutEnlargement: true })
-        .webp({ quality: WEBP_QUALITY })
-        .toBuffer();
-      fs.writeFileSync(fullPath, buffer);
-    } else {
-      // For PNG/JPG, keep format but optimize
-      const buffer = await image
-        .resize(maxSize, maxSize, { fit: 'inside', withoutEnlargement: true })
-        .toBuffer();
-      fs.writeFileSync(fullPath, buffer);
-    }
+    const out = isWebp ? sharp(input).webp({ quality: WEBP_QUALITY }) : sharp(input);
+    const buffer = await out
+      .resize(maxSize, maxSize, { fit: 'inside', withoutEnlargement: true })
+      .toBuffer();
+    fs.writeFileSync(fullPath, buffer);
 
     const newSize = fs.statSync(fullPath).size;
     const newSizeKB = Math.round(newSize / 1024);
     const savings = Math.round((1 - newSize / stat.size) * 100);
 
-    console.log(`  DONE  ${filename}: ${metadata.width}x${metadata.height} ${originalSizeKB}KB -> ${newSizeKB}KB (${savings}% saved)`);
+    console.log(`  DONE  ${filename}: ${width}x${height} ${originalSizeKB}KB -> ${newSizeKB}KB (${savings}% saved)`);
     return { filename, skipped: false, originalSizeKB, newSizeKB, savings };
 
   } catch (err) {
@@ -103,7 +96,7 @@ async function main() {
   let skipped = 0;
 
   for (const file of files) {
-    const result = await optimizeImage(path.join(IMG_DIR, file), file);
+    const result = await optimizeImage(file);
     if (result.skipped) {
       skipped++;
       totalOriginal += result.originalSizeKB;

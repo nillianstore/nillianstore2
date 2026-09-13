@@ -9,8 +9,10 @@
               src="{{ img }}"
               alt="{{ image_alts[loop.index0] or (title ~ ' - Image ' ~ loop.index) }}"
               class="img-fluid rounded"
-              loading="lazy"
+              width="1200"
+              height="1200"
               style="max-height: 500px; object-fit: contain;"
+              {% if loop.index0 > 0 %}loading="lazy" decoding="async"{% else %}fetchpriority="high"{% endif %}
             />
           </div>
         {% endfor %}
@@ -28,8 +30,10 @@
         src="{{ images[0] }}"
         alt="{{ title }}"
         class="img-fluid rounded"
-        loading="lazy"
+        width="1200"
+        height="1200"
         style="max-height: 500px; object-fit: contain;"
+        fetchpriority="high"
       />
     </div>
   {% elif cover %}
@@ -39,8 +43,10 @@
         src="{{ cover }}"
         alt="{{ title }}"
         class="img-fluid rounded"
-        loading="lazy"
+        width="1200"
+        height="1200"
         style="max-height: 500px; object-fit: contain;"
+        fetchpriority="high"
       />
     </div>
   {% else %}
