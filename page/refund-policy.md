@@ -9,8 +9,6 @@ eleventyNavigation:
   order: 10
 ---
 
-# Refund & Return Policy
-
 **Last updated: July 11, 2026**
 
 At **Nillianstore**, your satisfaction is our priority. Since all purchases are fulfilled through **Amazon.ae**, returns and refunds are processed according to Amazon's policies, with our dedicated support to guide you through the process.

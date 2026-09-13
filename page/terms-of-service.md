@@ -9,8 +9,6 @@ eleventyNavigation:
   order: 8
 ---
 
-# Terms of Service
-
 **Last updated: July 11, 2026**
 
 Welcome to **Nillianstore**. By accessing or using our website at **nillianstore.com**, you agree to be bound by these Terms of Service ("Terms"). If you do not agree with any part of these Terms, please discontinue use of our website.

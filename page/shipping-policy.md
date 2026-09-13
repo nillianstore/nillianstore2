@@ -9,8 +9,6 @@ eleventyNavigation:
   order: 9
 ---
 
-# Shipping Policy
-
 **Last updated: July 11, 2026**
 
 At **Nillianstore**, all products are fulfilled and shipped by **Amazon.ae**. This means you benefit from Amazon's reliable delivery network across the United Arab Emirates. Below is our shipping policy that explains how delivery works when you purchase products through our curated storefront.

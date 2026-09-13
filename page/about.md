@@ -9,8 +9,6 @@ eleventyNavigation:
   order: 3
 ---
 
-# About Nillianstore
-
 You don’t just buy products — you create moments.  
 At **Nillianstore**, we believe in bringing more than items to your home. We bring **curated beauty**, **thoughtful design**, and **trusted quality** — all designed to elevate everyday living in the UAE.
 

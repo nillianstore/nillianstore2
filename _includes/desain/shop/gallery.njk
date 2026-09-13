@@ -7,7 +7,7 @@
           <div class="swiper-slide d-flex justify-content-center">
             <img
               src="{{ img }}"
-              alt="{{ title }} - Image {{ loop.index }}"
+              alt="{{ image_alts[loop.index0] or (title ~ ' - Image ' ~ loop.index) }}"
               class="img-fluid rounded"
               loading="lazy"
               style="max-height: 500px; object-fit: contain;"

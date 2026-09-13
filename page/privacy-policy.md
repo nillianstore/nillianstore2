@@ -9,8 +9,6 @@ eleventyNavigation:
   order: 7
 ---
 
-# Privacy Policy
-
 **Last updated: July 11, 2026**
 
 At **Nillianstore** ("we," "us," or "our"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website **nillianstore.com** or use our services.
