@@ -2,6 +2,16 @@
   publish = "_site"
   command = "DEBUG=* eleventy"
 
+# Blog listing moved from /archive/ to /posts/
+[[redirects]]
+  from = "/archive/"
+  to = "/posts/"
+  status = 301
+[[redirects]]
+  from = "/archive"
+  to = "/posts/"
+  status = 301
+
 # Old shop-listing permalink moved from /shops/ to /shop/
 [[redirects]]
   from = "/shops/"

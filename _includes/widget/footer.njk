@@ -1,99 +1,61 @@
-<footer class="bg-light pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-      <!-- Brand & Description -->
-      <div class="col-md-4 mb-4">
-        <h5>
-          <strong><a href="{{ metadata.url }}" class="text-dark text-decoration-none">{{ metadata.title }}</a></strong>
-        </h5>
-        <p class="text-muted small">
-          Handpicked home decor & lifestyle products for UAE homes.<br>
-          Curated with care, delivered via Amazon.ae.
-        </p>
-        <!-- Trust Badges -->
-        <div class="d-flex flex-wrap mt-3" style="gap: 10px;">
-          <span class="badge bg-success text-white px-3 py-2">
-            <i class="fas fa-lock me-1"></i> SSL Secured
-          </span>
-          <span class="badge bg-warning text-dark px-3 py-2">
-            <i class="fab fa-amazon me-1"></i> Amazon Verified
-          </span>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
-        <ul class="list-unstyled">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="mb-2">
-              <a href="{{ entry.url | url }}" class="text-decoration-none text-muted small">
-                {{ entry.title }}
-              </a>
-            </li>
-          {%- endfor %}
-        </ul>
-      </div>
-
-      <!-- Policies -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Policies</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="/privacy-policy/" class="text-decoration-none text-muted small">Privacy Policy</a></li>
-          <li class="mb-2"><a href="/terms-of-service/" class="text-decoration-none text-muted small">Terms of Service</a></li>
-          <li class="mb-2"><a href="/shipping-policy/" class="text-decoration-none text-muted small">Shipping Policy</a></li>
-          <li class="mb-2"><a href="/refund-policy/" class="text-decoration-none text-muted small">Refund & Return Policy</a></li>
-          <li class="mb-2"><a href="/contact/" class="text-decoration-none text-muted small">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Business Info -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Business Information</h6>
-        <address class="text-muted small mb-2">
-          <strong>Nillianstore</strong><br>
-          Abu Dhabi, United Arab Emirates<br>
-          <a href="mailto:{{ metadata.author.email }}" class="text-decoration-none text-muted">{{ metadata.author.email }}</a><br>
-          <a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored" class="text-decoration-none text-muted">
-            <i class="fab fa-amazon me-1"></i>Amazon.ae Storefront
-          </a>
-        </address>
+<footer class="ns-footer">
+  <div class="foot-grid">
+    <!-- Brand -->
+    <div>
+      <a class="foot-brand" href="{{ '/' | url }}">{{ metadata.shopname }}<span class="brand-dot">.</span></a>
+      <p class="foot-desc">Handpicked home decor, tea accessories and lifestyle finds for UAE homes. Curated with care, delivered by Amazon.ae.</p>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/nillianstore" target="_blank" rel="noopener nofollow" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/share/17DyggcD7b/?mibextid=wwXIfr" target="_blank" rel="noopener nofollow" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.2c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4V10H7.7v3h2.7v8h3.1z"/></svg></a>
+        <a href="https://www.tiktok.com/@nillianstore" target="_blank" rel="noopener nofollow" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-1-.7-1.7-1.8-1.9-3.1h-2.9v11.6c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1V8.9c-.3 0-.5-.1-.8-.1-2.9 0-5.2 2.3-5.2 5.2s2.3 5.2 5.2 5.2 5.2-2.3 5.2-5.2V8.9c1.2.9 2.6 1.4 4.1 1.4v-2.9c-1 0-2-.3-2.9-.9z"/></svg></a>
+        <a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored" aria-label="Amazon.ae"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.8 2 2.6 3.7 1 6.4c0 .3 0 .6.1.9 1.7 2.3 5.1 3.8 9.4 3.8.9 0 1.8-.1 2.6-.2l1.6-.3c1-.2 1.3.2.8 1-2 3-4.6 4.9-7.7 4.9-1.6 0-3.1-.5-4.4-1.4-.4-.3-.9-.2-1.1.2l-.5.9c.6 1.3 2.9 2.7 5.4 3.3 1.4.3 2.8.3 4.1.1 4.6-.7 7.9-3.9 7.9-8.4C20.2 5 17.3 2 12 2z"/></svg></a>
       </div>
     </div>
 
-    <!-- Social Media Icons -->
-    <div class="text-center mt-3 mb-3">
-      <p class="small text-muted mb-2">Follow Us & Shop</p>
-      <div class="d-flex justify-content-center" style="gap: 20px; font-size: 1.4em;">
-        <a href="https://www.instagram.com/nillianstore" target="_blank" rel="noopener nofollow" aria-label="Instagram" class="text-dark">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/share/17DyggcD7b/?mibextid=wwXIfr" target="_blank" rel="noopener nofollow" aria-label="Facebook" class="text-dark">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.tiktok.com/@nillianstore" target="_blank" rel="noopener nofollow" aria-label="TikTok" class="text-dark">
-          <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="mailto:nillianstore@gmail.com" aria-label="Email" class="text-dark">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.amazon.ae/s?me=A20X6G0BNN7WDJ&marketplaceID=A2VIGQ35RCS4UG" target="_blank" rel="noopener nofollow sponsored" aria-label="Shop on Amazon.ae" class="text-dark">
-          <i class="fab fa-amazon"></i>
-        </a>
-      </div>
+    <!-- Shop -->
+    <div>
+      <h6>Shop</h6>
+      <ul>
+        <li><a href="/shop/">All Products</a></li>
+        <li><a href="/shop/?cat=home-decor">Home Decor</a></li>
+        <li><a href="/shop/?cat=kitchen">Kitchen &amp; Tea</a></li>
+        <li><a href="/shop/?cat=lighting">Lighting</a></li>
+        <li><a href="/shop/?cat=fashion">Fashion</a></li>
+        <li><a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored">Amazon.ae Storefront</a></li>
+      </ul>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="border-top pt-3 text-center">
-      <p class="text-muted small mb-1">
-        &copy; <script>document.write(new Date().getFullYear())</script> Nillianstore. All rights reserved.
-      </p>
-      <p class="text-muted small mb-0">
-        All purchases are securely processed through Amazon.ae with buyer protection.<br>
-        Prices are displayed in AED (UAE Dirham). Delivery available across the UAE.
-      </p>
+    <!-- Policies -->
+    <div>
+      <h6>Policies</h6>
+      <ul>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
+        <li><a href="/shipping-policy/">Shipping Policy</a></li>
+        <li><a href="/refund-policy/">Refund &amp; Returns</a></li>
+      </ul>
+    </div>
+
+    <!-- Company / Contact -->
+    <div>
+      <h6>Company</h6>
+      <div class="foot-contact">
+        <a href="/about/">About Nillianstore</a><br/>
+        <a href="/contact/">Contact Us</a><br/>
+        <a href="{{ metadata.author.email }}">{{ metadata.author.email }}</a><br/>
+        Abu Dhabi, United Arab Emirates
+      </div>
     </div>
   </div>
-</footer>
 
+  <div class="foot-bottom">
+    <span>&copy; <span id="ns-year">2025</span> {{ metadata.title }}. All rights reserved. All purchases are processed securely through Amazon.ae with buyer protection. Prices in AED.</span>
+    <span>
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/terms-of-service/">Terms</a>
+      <a href="/sourcecode/">Source</a>
+    </span>
+  </div>
+</footer>
+<script>document.getElementById('ns-year').textContent = new Date().getFullYear();</script>
 {% include "widget/script.njk" %}

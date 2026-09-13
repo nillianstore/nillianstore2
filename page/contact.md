@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Contact Us
-description: Contact Nillianstore in Abu Dhabi, UAE. Reach us by email, phone, or visit our Amazon.ae storefront for product inquiries and support.
+description: Contact Nillianstore in Abu Dhabi, UAE. Reach us by email, or visit our Amazon.ae storefront for product inquiries and support.
 cover: /img/contact.webp
 address: Abu Dhabi
 addressLine2: United Arab Emirates
@@ -9,7 +9,7 @@ city: Abu Dhabi
 state: United Arab Emirates
 country: AE
 postalCode: ""
-phone: +971586229432
+phone: ""
 phone1: ""
 email: nillianstore@gmail.com
 amazonStore: https://www.amazon.ae/s?me=A20X6G0BNN7WDJ&marketplaceID=A2VIGQ35RCS4UG

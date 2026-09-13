@@ -1,101 +1,130 @@
 ---
 layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
 ---
-<!-- Animated CTA Banner -->
-<div class="text-center my-5">
-  <h1 class="mb-4">Shop Handpicked gifts Curated for UAE Homes Delivered by Amazon</h1>
-  <div class="cta-video-wrapper" style="width: 100%; display: flex; justify-content: center;">
-    <video 
-      autoplay 
-      muted 
-      loop 
-      playsinline 
-      class="img-fluid rounded cta-video" 
-      style="width: 100%; max-width: 1200px; border-radius: 1rem; display: block;"
-    >
-      <source src="/videos/CTAdesktop.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <a href="/shop/" class="btn btn-light btn-lg mt-3 px-5" style="font-weight: 600; display: inline-block;">
-    Shop All Products
-  </a>
-</div>
-<script>
-  // Swap video source based on screen width
-  document.addEventListener('DOMContentLoaded', function() {
-    var video = document.querySelector('.cta-video');
-    if (!video) return;
-    var source = video.querySelector('source');
-    if (window.innerWidth < 768) {
-      source.setAttribute('src', '/videos/CTAmobile.mp4');
-    } else {
-      source.setAttribute('src', '/videos/CTAdesktop.mp4');
-    }
-    video.load();
-  });
-</script>
-<!-- End Animated CTA Banner -->
-{% include "desain/home/header.njk" %}
-{% include "desain/home/shop.njk" %}
-{% include "desain/home/blog.njk" %}
+{% set heroProducts = collections.shops | reverse | head(4) %}
+{% set featured = collections.shops | reverse | head(8) %}
+{% set newShops = collections.shops | head(-5) %}
+{% set newShopsCounter = collections.shops | length %}
+{% set shopslist = collections.shops | head(-5) %}
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
 
-<!-- Trust & Reputation Section -->
-<div class="container my-5">
-  <div class="row text-center">
-    <div class="col-md-3 col-6 mb-3">
-      <div class="p-3">
-        <i class="fas fa-shield-alt" style="font-size: 2rem; color: #28a745;"></i>
-        <h6 class="mt-2 fw-bold">Secure Shopping</h6>
-        <p class="text-muted small mb-0">SSL encrypted website with secure Amazon.ae checkout</p>
-      </div>
-    </div>
-    <div class="col-md-3 col-6 mb-3">
-      <div class="p-3">
-        <i class="fas fa-truck" style="font-size: 2rem; color: #007bff;"></i>
-        <h6 class="mt-2 fw-bold">Fast UAE Delivery</h6>
-        <p class="text-muted small mb-0">2-5 business days across all 7 emirates via Amazon</p>
-      </div>
-    </div>
-    <div class="col-md-3 col-6 mb-3">
-      <div class="p-3">
-        <i class="fas fa-undo" style="font-size: 2rem; color: #17a2b8;"></i>
-        <h6 class="mt-2 fw-bold">Easy Returns</h6>
-        <p class="text-muted small mb-0">15-day return policy with Amazon buyer protection</p>
-      </div>
-    </div>
-    <div class="col-md-3 col-6 mb-3">
-      <div class="p-3">
-        <i class="fab fa-amazon" style="font-size: 2rem; color: #ff9900;"></i>
-        <h6 class="mt-2 fw-bold">Amazon Verified</h6>
-        <p class="text-muted small mb-0">Official Amazon.ae storefront with verified seller status</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Customer Reviews -->
-<div class="embedsocial-hashtag" data-ref="da6096c657b7d7b3f9869163a1306690d410d2b9"></div>
-
-<!-- Policy Links Bar -->
-<div class="bg-dark text-white py-3">
+<!-- ============ HERO (Option B split hero) ============ -->
+<section class="ns-hero">
   <div class="container">
-    <div class="row text-center align-items-center">
-      <div class="col-md-6 mb-2 mb-md-0">
-        <span class="small">Transparency & Trust:</span>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h1 class="ns-h1">{{home.title1}}</h1>
+        <p class="ns-sub">{{home.intro1}} <span class="text-muted">{{home.title2}}</span></p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <a href="/shop/" class="btn btn-dark btn-lg me-2">Shop Products</a>
+          <a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored" class="btn btn-outline-dark btn-lg">Amazon.ae Storefront</a>
+        </div>
+        <ul class="ns-trustlist">
+          <li>Fast UAE delivery</li>
+          <li>Secure Amazon checkout</li>
+          <li>Easy returns</li>
+        </ul>
       </div>
-      <div class="col-md-6">
-        <a href="/about/" class="text-white text-decoration-none small me-3">About Us</a>
-        <a href="/shipping-policy/" class="text-white text-decoration-none small me-3">Shipping</a>
-        <a href="/refund-policy/" class="text-white text-decoration-none small me-3">Returns</a>
-        <a href="/privacy-policy/" class="text-white text-decoration-none small me-3">Privacy</a>
-        <a href="/terms-of-service/" class="text-white text-decoration-none small">Terms</a>
+      <div class="col-lg-6">
+        <div class="hero-collage">
+          {% for p in heroProducts %}
+          <a href="{{ p.url | url }}" class="hc-tile" style="--i: {{ loop.index }}">
+            {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}" loading="lazy" width="400" height="400"/>{% endif %}
+          </a>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-{% include "widget/contact.njk" %}
+<!-- ============ FEATURED SCROLLER (from Option A) ============ -->
+<section class="featured" aria-label="Featured products">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-end mb-3 px-4">
+      <h2 class="h3 mb-0">Featured Products</h2>
+      <a href="/shop/" class="btn btn-dark btn-sm">View All</a>
+    </div>
+    <div class="scroller">
+      {% for p in featured %}
+      <a href="{{ p.url | url }}" class="card product-card text-decoration-none text-dark">
+        <div class="card-img-wrap">
+          {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}" loading="lazy" width="600" height="600"/>{% endif %}
+        </div>
+        <div class="card-body">
+          <p class="title fw-semibold mb-1">{{ p.data.title }}</p>
+          <p class="price mb-0">{{ p.data.price }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEW PRODUCTS GRID (Option B) ============ -->
+<section class="products" aria-label="New products">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col-sm">
+        <h2 class="h3 mb-0">New Products</h2>
+        <p class="text-muted mb-0">{{ newShopsCounter }} handpicked finds, updated weekly</p>
+      </div>
+      <div class="col-sm text-end">
+        <a href="/shop/" class="btn btn-dark btn-sm">Explore All Products</a>
+      </div>
+    </div>
+    <div class="row g-4">
+      {% for shop in newShops %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="{{ shop.url | url }}" class="card product-card text-decoration-none text-dark">
+          <div class="card-img-wrap">
+            {% if shop.data.cover %}<img src="{{ shop.data.cover }}" alt="{{ shop.data.cover_alt or shop.data.title }}" loading="lazy" width="600" height="600"/>{% endif %}
+          </div>
+          <div class="card-body">
+            <p class="title fw-semibold mb-1">{{ shop.data.title }}</p>
+            <p class="price mb-0">{{ shop.data.price }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ LATEST FROM THE BLOG ============ -->
+<section class="products">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col-sm">
+        <h2 class="h3 mb-0">From the Blog</h2>
+        <p class="text-muted mb-0">Ideas and guides for UAE homes</p>
+      </div>
+      <div class="col-sm text-end">
+        <a href="/posts/" class="btn btn-dark btn-sm">Read All Posts</a>
+      </div>
+    </div>
+    <div class="row g-4">
+      {% for post in postslist %}
+      <div class="col-md-4">
+        <a href="{{ post.url | url }}" class="card product-card text-decoration-none text-dark">
+          {% if post.data.cover %}<div class="card-img-wrap ratio-16x9"><img src="{{ post.data.cover }}" alt="{{ post.data.cover_alt or post.data.title }}" loading="lazy" width="600" height="400"/></div>{% endif %}
+          <div class="card-body">
+            <p class="title fw-semibold mb-1">{{ post.data.title }}</p>
+            <p class="excerpt mb-0">{{ post.data.description }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMAZON BANNER (was: video CTA) ============ -->
+<section class="banner">
+  <div class="container py-5 text-center">
+    <h2 class="h3 mb-2">Shop with confidence on Amazon.ae</h2>
+    <p class="text-muted mx-auto" style="max-width: 560px;">{{home.intro2}}</p>
+    <a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored" class="btn btn-dark btn-lg mt-2">Visit Our Amazon.ae Storefront</a>
+  </div>
+</section>

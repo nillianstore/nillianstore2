@@ -1,8 +1,47 @@
-<div class="col-md-6 p-3 p-md-5">
-{% include "desain/blog/post.njk" %}
-</div>
-<div class="col-md-6 p-3 p-md-5">
-{% include "desain/blog/shop.njk" %}
-</div>
-</div>
+<div class="container py-4">
+  <div class="row">
+    <article class="col-lg-8 col-xl-9">
+      <h1>{{ title }}</h1>
+      {% if description %}<p class="lead text-muted">{{ description }}</p>{% endif %}
+      <p class="text-muted small">Published <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+      {% if tags %}
+      &nbsp;·&nbsp;
+      {%- for tag in tags | filterTagList -%}
+        {%- if tag in collections.tagList -%}
+          {%- set tagUrl %}/tags/{{ tag | safeSlug }}/{% endset -%}
+          <a href="{{ tagUrl | url }}" class="tag-pill">#{{ tag }}</a>&nbsp;
+        {%- endif -%}
+      {%- endfor -%}
+      {% endif %}
+      </p>
+      {% if cover %}<img class="post-cover" alt="{{ cover_alt or title }}" width="1200" height="675" src="{{cover}}"/>{% endif %}
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+      {% include "desain/blog/nav.njk" %}
+    </article>
+    <aside class="col-lg-4 col-xl-3">
+      <h2 class="h5 mb-3">You might like</h2>
+      {% set relShops = collections.shops %}
+      {% set curTags = tags | filterTagList %}
+      {% set related = [] %}
+      {% for item in relShops %}
+        {% set itemTags = item.data.tags | filterTagList %}
+        {% for t in curTags %}
+          {% if t in itemTags %}{% if related.push(item) %}{% endif %}{% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% for rel in related | head(4) %}
+      <a href="{{ rel.url | url }}" class="card product-card text-decoration-none text-dark mb-3">
+        <div class="row g-2 align-items-center">
+          {% if rel.data.cover %}<div class="col-4"><img src="{{ rel.data.cover }}" alt="{{ rel.data.cover_alt or rel.data.title }}" loading="lazy" width="120" height="120"/></div>{% endif %}
+          <div class="col">
+            <p class="title fw-semibold mb-1" style="font-size:.875rem">{{ rel.data.title }}</p>
+            <p class="price mb-0">{{ rel.data.price }}</p>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </aside>
+  </div>
 </div>

@@ -1,10 +1,12 @@
-<div class="container mt-5">
-<h1 class="text-center">Menu</h1>
-<div  class="row black p-3">
-{% for tag in collections.tagList | filterTagList %}
-  {% set tagUrl %}/tags/{{ tag | safeSlug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="col-md-4 col-6 p-1">{{ tag }}</a>
-{% endfor %}
+<div class="container py-4">
+  <div class="text-center p-3 mb-4">
+    <h1>All Tags</h1>
+    <p class="lead text-muted mb-0">Browse the shop by theme</p>
+  </div>
+  <div class="d-flex flex-wrap gap-2 justify-content-center">
+  {% for tag in collections.tagList | filterTagList %}
+    {% set tagUrl %}/tags/{{ tag | safeSlug }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="chip">{{ tag }}</a>
+  {% endfor %}
+  </div>
 </div>
-</div>
-{% include "widget/contact.njk" %}

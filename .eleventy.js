@@ -51,6 +51,25 @@ module.exports = function (eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
+  eleventyConfig.addFilter('unique', (arr) => {
+    return Array.from(new Set((arr || []).filter(v => v != null && v !== '')));
+  });
+
+  // Map items to a (dotted) property, e.g. items | map(attribute="data.category")
+  eleventyConfig.addFilter('map', function (items, opts) {
+    var key = typeof opts === 'string' ? opts : (opts && opts.attribute ? String(opts.attribute) : null);
+    if (!Array.isArray(items) || !key) return [];
+    return items.map(function (it) {
+      if (it == null) return undefined;
+      var parts = key.split('.');
+      var v = it;
+      for (var i = 0; i < parts.length; i++) {
+        v = v == null ? undefined : v[parts[i]];
+      }
+      return v;
+    });
+  });
+
   // Safe slug filter: normalizes using Eleventy's slug filter then removes any HTML entities
   // and unsafe characters (e.g., #, ?, apostrophes) so filenames are valid on Netlify.
   const eleventySlug = eleventyConfig.getFilter('slug');

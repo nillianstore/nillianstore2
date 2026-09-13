@@ -1,3 +1,39 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
+<script defer>
+/* --- Minimal product search (Option B) --- */
+(function () {
+  var input = document.getElementById('search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var data = null, timer = null;
+  fetch('/products.json').then(function (r) { return r.json(); }).then(function (j) {
+    data = (j.products || []).map(function (p) {
+      return { t: p.title.toLowerCase(), d: (p.description || '').toLowerCase(),
+               T: p.title, img: p.image, P: p.price, l: p.link };
+    });
+  }).catch(function () { data = []; });
+
+  function render(q) {
+    if (!data || q.length < 2) { box.classList.add('d-none'); input.setAttribute('aria-expanded', 'false'); return; }
+    var ql = q.toLowerCase(), hits = data.filter(function (p) { return p.t.indexOf(ql) > -1 || p.d.indexOf(ql) > -1; }).slice(0, 8);
+    box.innerHTML = hits.length
+      ? hits.map(function (p) {
+          return '<a class="search-item" href="' + p.l + '">' +
+            (p.img ? '<img src="' + p.img + '" alt="" width="40" height="40" loading="lazy"/>' : '') +
+            '<span>' + p.T + ' <small class="text-muted">' + p.P + '</small></span></a>';
+        }).join('')
+      : '<div class="px-3 py-2 text-muted small">No products found.</div>';
+    box.classList.remove('d-none'); input.setAttribute('aria-expanded', 'true');
+  }
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    var v = input.value.trim();
+    if (v.length < 2) { render(''); return; }
+    timer = setTimeout(function () { render(v); }, 180);
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { box.classList.add('d-none'); input.setAttribute('aria-expanded', 'false'); } });
+  document.addEventListener('click', function (e) { if (!box.contains(e.target) && e.target !== input) { box.classList.add('d-none'); input.setAttribute('aria-expanded', 'false'); } });
+})();
+</script>
 </body>
 </html>

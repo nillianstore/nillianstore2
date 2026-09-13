@@ -1,95 +1,45 @@
-<div class="container mt-5 mb-5">
-  <div class="text-center mb-4">
-    <h1><strong>Contact Us</strong></h1>
-    <p class="text-muted">We're here to help. Reach out through any of the channels below.</p>
-  </div>
-
-  <div class="row text-center">
-    <!-- Address -->
-    <div class="col-md-4 p-3">
-      <div class="bg-light rounded p-3 p-md-5 h-100">
-        <div class="mb-3" style="font-size: 2rem; color: #333;">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <h5 class="mt-3"><strong>Business Address</strong></h5>
-        <p class="mb-0">{{address}}</p>
-        <p class="mb-0">{{addressLine2 or state}}</p>
-        <p class="text-muted small mt-2">Abu Dhabi, United Arab Emirates</p>
-      </div>
-    </div>
-
-    <!-- Contact Methods -->
-    <div class="col-md-4 p-3">
-      <div class="bg-light rounded p-3 p-md-5 h-100">
-        <div class="mb-3" style="font-size: 2rem; color: #333;">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <h5 class="mt-3"><strong>Email & Phone</strong></h5>
-        <p class="mb-1">
-          <a href="mailto:{{email}}" class="text-dark text-decoration-none">{{email}}</a>
-        </p>
-        {% if phone and phone != "+971" %}
-        <p class="mb-0">{{phone}}</p>
-        {% endif %}
-        <p class="text-muted small mt-2">We reply within 24 hours</p>
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Email -->
+    <div class="col-md-4">
+      <div class="contact-card h-100">
+        <div class="contact-icon">&#9993;</div>
+        <h5 class="mt-3 mb-2">Email Us</h5>
+        <p class="text-muted small mb-3">We reply within 24 hours.</p>
+        <a href="mailto:{{ email }}" class="text-dark fw-semibold text-decoration-none">{{ email }}</a>
       </div>
     </div>
 
     <!-- Amazon Storefront -->
-    <div class="col-md-4 p-3">
-      <div class="bg-light rounded p-3 p-md-5 h-100">
-        <div class="mb-3" style="font-size: 2rem; color: #ff9900;">
-          <i class="fab fa-amazon"></i>
-        </div>
-        <h5 class="mt-3"><strong>Amazon.ae Storefront</strong></h5>
-        <p>Shop our full curated collection directly on Amazon.ae</p>
-        <a href="{{amazonStore}}" target="_blank" rel="noopener nofollow sponsored" class="btn btn-sm btn-dark mt-2" style="background: #ff9900; color: #000; border: none; font-weight: 600;">
-          Visit Storefront
-        </a>
+    <div class="col-md-4">
+      <div class="contact-card h-100">
+        <div class="contact-icon amazon">&#9993;</div>
+        <h5 class="mt-3 mb-2">Amazon.ae Storefront</h5>
+        <p class="text-muted small mb-3">Shop our full curated collection directly on Amazon.ae.</p>
+        <a href="{{ amazonStore }}" target="_blank" rel="noopener nofollow sponsored" class="btn btn-dark btn-sm">Visit Storefront</a>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="col-md-4">
+      <div class="contact-card h-100">
+        <div class="contact-icon">&#9678;</div>
+        <h5 class="mt-3 mb-2">Based in</h5>
+        <p class="text-muted small mb-1">{{ address }}, United Arab Emirates</p>
+        <p class="text-muted small mb-0">Online &mdash; available 24/7</p>
       </div>
     </div>
   </div>
 
-  <!-- Social Media Links -->
-  <div class="text-center mt-4 mb-4">
-    <h5><strong>Follow Us</strong></h5>
-    <div class="d-flex justify-content-center mt-3" style="gap: 20px; font-size: 1.6rem;">
-      <a href="https://www.instagram.com/nillianstore" target="_blank" rel="noopener nofollow" aria-label="Instagram" class="text-dark">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/share/17DyggcD7b/?mibextid=wwXIfr" target="_blank" rel="noopener nofollow" aria-label="Facebook" class="text-dark">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.tiktok.com/@nillianstore" target="_blank" rel="noopener nofollow" aria-label="TikTok" class="text-dark">
-        <i class="fab fa-tiktok"></i>
-      </a>
-      <a href="mailto:nillianstore@gmail.com" aria-label="Email" class="text-dark">
-        <i class="fas fa-envelope"></i>
-      </a>
+  <!-- Follow -->
+  <div class="text-center mt-4">
+    <h5 class="fw-bold">Follow us</h5>
+    <div class="d-flex justify-content-center mt-3 gap-4">
+      <a href="https://www.instagram.com/nillianstore" target="_blank" rel="noopener nofollow" class="btn btn-outline-dark btn-sm">Instagram</a>
+      <a href="https://www.facebook.com/share/17DyggcD7b/?mibextid=wwXIfr" target="_blank" rel="noopener nofollow" class="btn btn-outline-dark btn-sm">Facebook</a>
+      <a href="https://www.tiktok.com/@nillianstore" target="_blank" rel="noopener nofollow" class="btn btn-outline-dark btn-sm">TikTok</a>
     </div>
   </div>
 
-  <!-- Business Info Section -->
-  <div class="row mt-5">
-    <div class="col-md-8 mx-auto">
-      <div class="bg-dark text-white rounded p-4 p-md-5">
-        <h4 class="text-center mb-4"><strong>Business Information</strong></h4>
-        <div class="row">
-          <div class="col-md-6">
-            <p><strong>Business Name:</strong> Nillianstore</p>
-            <p><strong>Location:</strong> Abu Dhabi, United Arab Emirates</p>
-            <p><strong>Email:</strong> nillianstore@gmail.com</p>
-          </div>
-          <div class="col-md-6">
-            <p><strong>Business Type:</strong> Curated Online Storefront</p>
-            <p><strong>Marketplace:</strong> Amazon.ae</p>
-            <p><strong>Hours:</strong> Online — 24/7</p>
-          </div>
-        </div>
-        <div class="text-center mt-3">
-          <p class="small mb-0">All purchases are securely processed through Amazon.ae with buyer protection.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <p class="text-center text-muted small mt-4 mb-0">All purchases are securely processed through Amazon.ae with buyer protection.</p>
 </div>

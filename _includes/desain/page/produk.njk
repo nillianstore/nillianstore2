@@ -1,9 +1,64 @@
-<div class="container">
-<div class="text-center p-3 mt-5 mb-5">
-<h1><strong><a href="{{page.url}}">{{title}}</a></strong></h1>
-<h2>{{description}}</h2>
+<div class="container py-4">
+  <div class="text-center p-3 mb-4">
+    <h1>{{ title }}</h1>
+    <p class="lead text-muted mb-0">{{ description }}</p>
+  </div>
+
+  <!-- Category filter chips -->
+  <div class="filter-chips mb-4" role="group" aria-label="Filter by category">
+    <button class="chip active" data-cat="all">All</button>
+    {% set cats = collections.shops | map(attribute="data.category") | unique %}
+    {% for c in cats %}
+    <button class="chip" data-cat="{{ c }}">{{ c | capitalize }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="row g-4" id="shop-grid">
+    {% set shopslist = collections.shops %}
+    {% for shop in shopslist %}
+    <div class="col-6 col-md-4 col-lg-3" data-cat="{{ shop.data.category or 'all' }}">
+      <a href="{{ shop.url | url }}" class="card product-card text-decoration-none text-dark">
+        <div class="card-img-wrap">
+          {% if shop.data.cover %}<img src="{{ shop.data.cover }}" alt="{{ shop.data.cover_alt or shop.data.title }}" loading="lazy" width="600" height="600"/>{% endif %}
+        </div>
+        <div class="card-body">
+          <p class="title fw-semibold mb-1">{{ shop.data.title }}</p>
+          <p class="price mb-0">{{ shop.data.price }}</p>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="text-center mt-4"><a href="{{ metadata.social.amazon }}" target="_blank" rel="noopener nofollow sponsored" class="btn btn-dark">More on our Amazon.ae Storefront</a></p>
 </div>
-{% set shopslist = collections.shops %}
-{% include "shopslist.njk" %}
-</div>
-{% include "widget/contact.njk" %}
+
+<script>
+(function () {
+  var chips = document.querySelectorAll('.chip');
+  if (!chips.length) return;
+  var items = document.querySelectorAll('#shop-grid > .col-6');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      var cat = chip.dataset.cat;
+      items.forEach(function (it) {
+        it.style.display = (cat === 'all' || it.dataset.cat === cat) ? '' : 'none';
+      });
+      try {
+        var url = new URL(location.href);
+        if (cat === 'all') { url.searchParams.delete('cat'); } else { url.searchParams.set('cat', cat); }
+        history.replaceState(null, '', url);
+      } catch (e) {}
+    });
+  });
+  // Honor ?cat= from footer links on load
+  try {
+    var wanted = new URL(location.href).searchParams.get('cat');
+    if (wanted) {
+      var match = document.querySelector('.chip[data-cat="' + wanted + '"]');
+      if (match) match.click();
+    }
+  } catch (e) {}
+})();
+</script>
