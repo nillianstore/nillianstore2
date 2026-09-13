@@ -1,7 +1,8 @@
-<div class="container py-4 mb-5">
-  <h1>{{ title }}</h1>
-  {% if description %}<p class="lead text-muted">{{ description }}</p>{% endif %}
-  {% if cover %}<img class="page-cover" alt="{{ cover_alt or title }}" width="1200" height="675" src="{{cover}}"/>{% endif %}
+<div class="container py-5 mb-5">
+  <div class="ns-page-head">
+    <h1 class="ns-page-title">{{ title }}</h1>
+    {% if description %}<p class="ns-page-lead">{{ description }}</p>{% endif %}
+  </div>
   <div class="prose">
     {{ content | safe }}
   </div>

@@ -2,7 +2,6 @@
 layout: layouts/page.njk
 title: Terms of Service
 description: Nillianstore Terms of Service - The terms and conditions governing your use of our website and curated product offerings in the UAE.
-cover: /img/about-hero.webp
 permalink: /terms-of-service/
 eleventyNavigation:
   key: Terms of Service
@@ -13,7 +12,6 @@ eleventyNavigation:
 
 Welcome to **Nillianstore**. By accessing or using our website at **nillianstore.com**, you agree to be bound by these Terms of Service ("Terms"). If you do not agree with any part of these Terms, please discontinue use of our website.
 
----
 
 ## 1. About Our Business
 
@@ -21,7 +19,6 @@ Nillianstore is a curated online storefront operating from **Abu Dhabi, United A
 
 **Important:** Nillianstore is **not a direct retailer**. We do not process payments, handle shipping, or fulfill orders directly. All purchases are completed through and fulfilled by Amazon.ae, subject to Amazon's own terms and conditions.
 
----
 
 ## 2. Acceptance of Terms
 
@@ -31,7 +28,6 @@ By using this website, you confirm that:
 - You will use the website in compliance with all applicable laws and regulations
 - You will not misuse, disrupt, or attempt to gain unauthorized access to the website
 
----
 
 ## 3. Use of Our Website
 
@@ -48,7 +44,6 @@ By using this website, you confirm that:
 - Using the site for fraudulent or unlawful purposes
 - Submitting false or misleading information through contact forms
 
----
 
 ## 4. Product Information
 
@@ -64,7 +59,6 @@ However, we cannot guarantee that:
 
 **Final pricing, availability, and product details are determined by Amazon.ae at the time of purchase.**
 
----
 
 ## 5. Purchasing Through Amazon.ae
 
@@ -76,7 +70,6 @@ When you click "Buy on Amazon.ae," you are redirected to the official Amazon.ae 
 
 Nillianstore earns an affiliate commission from qualifying purchases, at no additional cost to you. This commission supports our curation work and website maintenance.
 
----
 
 ## 6. Intellectual Property
 
@@ -88,7 +81,6 @@ All content on nillianstore.com, including but not limited to:
 
 is the property of Nillianstore and is protected under UAE and international copyright laws. Product images and trademarks belong to their respective owners and are displayed under Amazon's affiliate program terms.
 
----
 
 ## 7. Disclaimers
 
@@ -105,7 +97,6 @@ Nillianstore shall not be liable for:
 - Loss of data, revenue, or business opportunities
 - Product defects, delivery delays, or fulfillment issues (handled by Amazon.ae)
 
----
 
 ## 8. Third-Party Links
 
@@ -116,7 +107,6 @@ Our website contains links to third-party websites, including:
 
 We are not responsible for the content, policies, or practices of these third-party sites. Access them at your own risk.
 
----
 
 ## 9. Returns and Refunds
 
@@ -129,19 +119,16 @@ For order-specific return requests, please:
 
 For general inquiries, contact us at **nillianstore@gmail.com**.
 
----
 
 ## 10. Governing Law
 
 These Terms of Service are governed by the laws of the **United Arab Emirates**. Any disputes arising from your use of this website shall be subject to the jurisdiction of the courts in **Abu Dhabi, United Arab Emirates**.
 
----
 
 ## 11. Changes to Terms
 
 We reserve the right to update or modify these Terms at any time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the website after changes constitutes acceptance of the revised Terms.
 
----
 
 ## 12. Contact Information
 

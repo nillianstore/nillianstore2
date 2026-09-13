@@ -2,7 +2,6 @@
 layout: layouts/page.njk
 title: Shipping Policy
 description: Nillianstore Shipping Policy - Delivery times, shipping areas, and fulfillment information for products delivered across the UAE via Amazon.ae.
-cover: /img/about-hero.webp
 permalink: /shipping-policy/
 eleventyNavigation:
   key: Shipping Policy
@@ -13,7 +12,6 @@ eleventyNavigation:
 
 At **Nillianstore**, all products are fulfilled and shipped by **Amazon.ae**. This means you benefit from Amazon's reliable delivery network across the United Arab Emirates. Below is our shipping policy that explains how delivery works when you purchase products through our curated storefront.
 
----
 
 ## 1. Order Fulfillment
 
@@ -24,7 +22,6 @@ All orders placed through Nillianstore product links are:
 
 We curate and showcase products on our website, but the physical delivery is handled entirely by Amazon's logistics network.
 
----
 
 ## 2. Delivery Areas
 
@@ -42,7 +39,6 @@ Products are available for delivery across the **United Arab Emirates**, includi
 
 **Remote area delivery** may require additional time. Amazon.ae will confirm delivery availability based on your shipping address at checkout.
 
----
 
 ## 3. Processing Time
 
@@ -58,7 +54,6 @@ Processing times may vary during:
 - Amazon sale events (White Friday, Prime Day)
 - High-demand product launches
 
----
 
 ## 4. Delivery Timeframes
 
@@ -73,7 +68,6 @@ Standard delivery times within the UAE:
 
 **Note:** Amazon Prime members may be eligible for free expedited delivery on qualifying items.
 
----
 
 ## 5. Shipping Costs
 
@@ -85,7 +79,6 @@ Shipping costs are determined by **Amazon.ae** at checkout based on:
 
 Nillianstore does not charge any additional shipping fees. All shipping costs are transparently displayed on Amazon.ae before you complete your purchase.
 
----
 
 ## 6. Order Tracking
 
@@ -97,7 +90,6 @@ Once your order has been dispatched:
 
 If you experience any tracking issues, contact Amazon.ae customer service directly or reach out to us at **nillianstore@gmail.com** for guidance.
 
----
 
 ## 7. International Shipping
 
@@ -105,7 +97,6 @@ Currently, products listed on Nillianstore are available for delivery **within t
 
 If you are outside the UAE and interested in a product, please contact us, and we will direct you to the appropriate Amazon marketplace for your region.
 
----
 
 ## 8. Delivery Issues
 
@@ -121,7 +112,6 @@ If you experience any of the following delivery problems, please take the action
 
 For any delivery-related questions or to report issues, you can also contact Nillianstore at **nillianstore@gmail.com**, and we will help guide you through the resolution process.
 
----
 
 ## 9. Amazon Prime Benefits
 
@@ -132,7 +122,6 @@ If you are an **Amazon Prime** member, you may be eligible for:
 
 Prime membership is managed by Amazon.ae and is separate from Nillianstore. Check your Prime status on Amazon.ae.
 
----
 
 ## 10. Contact Us
 

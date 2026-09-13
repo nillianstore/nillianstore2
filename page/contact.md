@@ -2,7 +2,6 @@
 layout: layouts/page.njk
 title: Contact Us
 description: Contact Nillianstore in Abu Dhabi, UAE. Reach us by email, or visit our Amazon.ae storefront for product inquiries and support.
-cover: /img/contact.webp
 address: Abu Dhabi
 addressLine2: United Arab Emirates
 city: Abu Dhabi

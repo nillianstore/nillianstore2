@@ -2,7 +2,6 @@
 layout: layouts/page.njk
 title: Refund & Return Policy
 description: Nillianstore Refund and Return Policy - Clear guidelines for returns, refunds, and exchanges for products purchased through our Amazon.ae storefront in the UAE.
-cover: /img/about-hero.webp
 permalink: /refund-policy/
 eleventyNavigation:
   key: Refund Policy
@@ -13,7 +12,6 @@ eleventyNavigation:
 
 At **Nillianstore**, your satisfaction is our priority. Since all purchases are fulfilled through **Amazon.ae**, returns and refunds are processed according to Amazon's policies, with our dedicated support to guide you through the process.
 
----
 
 ## 1. Return Period
 
@@ -25,7 +23,6 @@ You may return most items within **15 days** of delivery for a full refund.
 | Damaged/defective items | 15 days from delivery (extended if reported promptly) |
 | Amazon Prime items | Subject to Amazon Prime return terms |
 
----
 
 ## 2. Condition Requirements
 
@@ -44,7 +41,6 @@ Items that are **not eligible** for return:
 - Customized or personalized products
 - Products marked as "non-returnable" on Amazon.ae
 
----
 
 ## 3. How to Initiate a Return
 
@@ -71,7 +67,6 @@ If you need help with the return process:
 
 We will respond within **24 hours** with step-by-step guidance.
 
----
 
 ## 4. Refund Processing
 
@@ -87,7 +82,6 @@ We will respond within **24 hours** with step-by-step guidance.
 - Refunds are issued to your **original payment method** (credit card, debit card, etc.)
 - Amazon.ae gift card refunds may be processed faster (1–2 business days)
 
----
 
 ## 5. Exchanges
 
@@ -98,7 +92,6 @@ If you received a damaged, defective, or incorrect item and would like an exchan
 
 Exchanges are subject to product availability. If the replacement item is out of stock, a full refund will be issued instead.
 
----
 
 ## 6. Damaged or Defective Items
 
@@ -114,7 +107,6 @@ If your product arrives damaged or defective:
 
 **Important:** Report damaged items within **48 hours** of delivery for the fastest resolution.
 
----
 
 ## 7. Return Shipping Costs
 
@@ -127,7 +119,6 @@ If your product arrives damaged or defective:
 
 Amazon.ae provides prepaid return shipping labels for eligible returns. You can drop off the package at designated collection points or schedule a pickup.
 
----
 
 ## 8. Partial Refunds
 
@@ -138,7 +129,6 @@ In some cases, Amazon may issue a **partial refund** for:
 
 You will be notified of any partial refund decision before it is processed.
 
----
 
 ## 9. Order Cancellation
 
@@ -151,7 +141,6 @@ You can cancel your order **before it has been shipped**:
 
 **After dispatch:** The order cannot be cancelled but can be returned following the standard return process above.
 
----
 
 ## 10. Nillianstore Commitment
 
@@ -167,7 +156,6 @@ Contact us at **nillianstore@gmail.com**, and we will:
 
 Your trust matters to us, and we are committed to ensuring a positive shopping experience from browse to delivery to return (if needed).
 
----
 
 ## 11. Contact Us
 
