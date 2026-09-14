@@ -87,9 +87,10 @@
     .small,.small p{font-size:.875em}
     @media(min-width:768px){.col-md-4{flex:0 0 auto;width:33.33333333%}.col-md-6{flex:0 0 auto;width:50%}.col-md-12{flex:0 0 auto;width:100%}.col-lg-10{flex:0 0 auto;width:83.33333333%}}
   </style>
+  <link rel="preload" href="{{ '/css/index.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/css/index.css' | url }}"></noscript>
   <link rel="preload" href="{{ '/css/bs.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/css/bs.css' | url }}"></noscript>
-  <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
   <!-- Font Awesome: preconnect + preload fonts for faster rendering -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -161,6 +162,9 @@
       object-fit: contain;
     }
   </style>
+
+  <!-- Critical above-the-fold CSS inlined (kills render-blocking LCP delay); full stylesheet loads non-blocking above -->
+  <style>{% include "widget/critical.css" %}</style>
 
   <!-- Google tag (gtag.js) -->
   <link rel="preconnect" href="https://www.googletagmanager.com">

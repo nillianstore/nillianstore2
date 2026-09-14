@@ -5,7 +5,7 @@ const path = require('path');
 const IMG_DIR = path.join(__dirname, '..', 'img');
 
 // Configuration
-const MAX_COVER = 1200;    // Max dimension for cover images
+const MAX_COVER = 800;     // Max dimension for cover images (largest cover display ~500px on product pages)
 const MAX_GALLERY = 800;   // Max dimension for gallery images
 const MAX_LOGO = 80;       // Logo size (2x for retina at 40px display)
 const MAX_TEMPLATE = 1200;  // Max dimension for template/misc images
