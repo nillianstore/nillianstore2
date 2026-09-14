@@ -38,55 +38,8 @@
   <meta name="developer" content="{{ metadata.author.url }}">
   <link rel="apple-touch-icon" href="{{metadata.icon}}">
   <link rel="icon" type="image/x-icon" href="{{metadata.icon}}" />
-  <!-- CSS: load critical first, defer non-critical -->
-  <style>
-    /* Critical Bootstrap utilities needed for above-the-fold rendering */
-    *,*::before,*::after{box-sizing:border-box}
-    .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
-    .row{--bs-gutter-x:1.5rem;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-x)*-.5);margin-right:calc(var(--bs-gutter-x)*-.5);margin-left:calc(var(--bs-gutter-x)*-.5)}
-    .col-md-4,.col-md-6,.col-md-12,.col-lg-10{flex:0 0 auto;width:100%}
-    .img-fluid{max-width:100%;height:auto}
-    .d-flex{display:flex!important}
-    .justify-content-center{justify-content:center!important}
-    .justify-content-end{justify-content:flex-end!important}
-    .text-center{text-align:center!important}
-    .text-dark{color:#212529!important}
-    .text-muted{color:#6c757d!important}
-    .text-decoration-none{text-decoration:none!important}
-    .rounded{border-radius:.375rem!important}
-    .mb-0{margin-bottom:0!important}
-    .mb-2{margin-bottom:.5rem!important}
-    .mb-3{margin-bottom:1rem!important}
-    .mb-4{margin-bottom:1.5rem!important}
-    .mt-2{margin-top:.5rem!important}
-    .mt-3{margin-top:1rem!important}
-    .mt-5{margin-top:3rem!important}
-    .p-3{padding:1rem!important}
-    .p-md-5{padding:3rem!important}
-    body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.5;color:#212529;background-color:#fff}
-    a{color:#0d6efd;text-decoration:underline}
-    img{vertical-align:middle}
-    .navbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:1rem}
-    .navbar-brand{padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;text-decoration:none;white-space:nowrap}
-    .nav-link{display:block;padding:.5rem 1rem;color:#0d6efd;text-decoration:none}
-    .btn{display:inline-block;font-weight:400;line-height:1.5;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem}
-    .btn-dark{color:#fff;background-color:#212529;border-color:#212529}
-    .btn-lg{padding:.5rem 1rem;font-size:1.25rem;border-radius:.3rem}
-    .lead{font-size:1.25rem;font-weight:300}
-    .h4{font-size:calc(1.275rem + .3vw)}
-    .h5{font-size:1.25rem}
-    h1{font-size:calc(1.375rem + 1.5vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
-    h2{font-size:calc(1.325rem + .9vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
-    h3{font-size:calc(1.3rem + .6vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
-    h4{font-size:calc(1.275rem + .3vw);font-weight:500;line-height:1.2;margin-top:0;margin-bottom:.5rem}
-    .bg-light{background-color:#f8f9fa!important}
-    .bg-dark{background-color:#212529!important}
-    .text-white{color:#fff!important}
-    .badge{display:inline-block;padding:.35em .65em;font-size:.75em;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.375rem}
-    .list-unstyled{padding-left:0;list-style:none}
-    .small,.small p{font-size:.875em}
-    @media(min-width:768px){.col-md-4{flex:0 0 auto;width:33.33333333%}.col-md-6{flex:0 0 auto;width:50%}.col-md-12{flex:0 0 auto;width:100%}.col-lg-10{flex:0 0 auto;width:83.33333333%}}
-  </style>
+  <!-- CSS: critical above-the-fold inlined; full stylesheets load non-blocking -->
+  <style>{% include "widget/bootstrap-above.css" %}</style>
   <link rel="preload" href="{{ '/css/index.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/css/index.css' | url }}"></noscript>
   <link rel="preload" href="{{ '/css/bs.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">

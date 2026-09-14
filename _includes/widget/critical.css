@@ -15,6 +15,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Manrope',sans-serif;letter-spacing:-0.5px}
 .navbar-nav .nav-link:hover,.navbar-nav .nav-link.active{color:var(--ns-ink);background:var(--ns-soft)}
 @media (max-width:991px){.navbar-collapse{background:#fff;border-bottom:1px solid var(--ns-line)}.navbar-nav .nav-link{display:block;padding:12px 16px;border-radius:0;border-bottom:1px solid var(--ns-line)}}
 .navbar-toggler{border:1px solid var(--ns-line);border-radius:8px;padding:8px 12px;background:#fff}
+/* Match Bootstrap .collapse:not(.show) from first paint so the mobile menu
+   doesn't flash open then collapse (previously caused ~0.25 CLS on .ns-hero) */
+#navbarNavAltMarkup:not(.show){display:none}
 #search-input{border-radius:999px !important;border:1px solid var(--ns-line) !important;font-size:13px !important;padding:9px 18px !important;font-weight:500;min-width:200px}
 #search-input:focus{box-shadow:none !important;border-color:var(--ns-ink) !important}
 .btn{font-weight:700;border-radius:10px;transition:background .15s,border-color .15s,transform .1s}

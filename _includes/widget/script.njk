@@ -6,12 +6,18 @@
   var box = document.getElementById('search-results');
   if (!input || !box) return;
   var data = null, timer = null;
-  fetch('/products.json').then(function (r) { return r.json(); }).then(function (j) {
-    data = (j.products || []).map(function (p) {
-      return { t: p.title.toLowerCase(), d: (p.description || '').toLowerCase(),
-               T: p.title, img: p.image, P: p.price, l: p.link };
-    });
-  }).catch(function () { data = []; });
+  // Fetch lazily on first keystroke so /products.json never sits on the
+  // critical path (was a ~1s LCP-adjacent chain).
+  function loadData() {
+    if (data) return;
+    fetch('/products.json').then(function (r) { return r.json(); }).then(function (j) {
+      data = (j.products || []).map(function (p) {
+        return { t: p.title.toLowerCase(), d: (p.description || '').toLowerCase(),
+                 T: p.title, img: p.image, P: p.price, l: p.link };
+      });
+      if (input.value.trim().length >= 2) render(input.value.trim());
+    }).catch(function () { data = []; });
+  }
 
   function render(q) {
     if (!data || q.length < 2) { box.classList.add('d-none'); input.setAttribute('aria-expanded', 'false'); return; }
@@ -29,7 +35,7 @@
     clearTimeout(timer);
     var v = input.value.trim();
     if (v.length < 2) { render(''); return; }
-    timer = setTimeout(function () { render(v); }, 180);
+    timer = setTimeout(function () { loadData(); render(v); }, 180);
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { box.classList.add('d-none'); input.setAttribute('aria-expanded', 'false'); } });
   document.addEventListener('click', function (e) { if (!box.contains(e.target) && e.target !== input) { box.classList.add('d-none'); input.setAttribute('aria-expanded', 'false'); } });

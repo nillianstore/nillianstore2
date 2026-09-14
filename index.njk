@@ -50,7 +50,7 @@ layout: layouts/home.njk
       {% for p in featured %}
       <a href="{{ p.url | url }}" class="card product-card text-decoration-none text-dark">
         <div class="card-img-wrap">
-          {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}" loading="lazy" width="600" height="600"/>{% endif %}
+          {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}"{% if loop.index0 == 0 %} fetchpriority="high"{% else %} loading="lazy"{% endif %} width="600" height="600"/>{% endif %}
         </div>
         <div class="card-body">
           <p class="title fw-semibold mb-1">{{ p.data.title }}</p>
