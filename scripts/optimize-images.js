@@ -10,6 +10,7 @@ const MAX_GALLERY = 800;   // Max dimension for gallery images
 const MAX_LOGO = 80;       // Logo size (2x for retina at 40px display)
 const MAX_TEMPLATE = 1200;  // Max dimension for template/misc images
 const WEBP_QUALITY = 80;
+const THUMB_SIZE = 400;    // Homepage card thumbs: displayed ~198-350px, 2x for retina
 
 // Check if filename is a gallery image (has -1, -2, -3, etc. suffix)
 function isGalleryImage(name) {
@@ -108,10 +109,39 @@ async function main() {
     }
   }
 
+  // Second pass: 400px thumbnails for product covers (homepage cards).
+  // Skipped by the main pass (they're not covers themselves); only generated
+  // for real B0 covers, never for -N gallery suffixes or misc images.
+  const thumbs = [];
+  for (const file of files) {
+    if (!isProductCover(file) || !file.toLowerCase().endsWith('.webp')) continue;
+    const thumbName = file.replace(/\.webp$/i, `-${THUMB_SIZE}.webp`);
+    const thumbPath = path.join(IMG_DIR, thumbName);
+    const coverMtime = fs.statSync(path.join(IMG_DIR, file)).mtimeMs;
+    const stale = !fs.existsSync(thumbPath) || fs.statSync(thumbPath).mtimeMs < coverMtime;
+    if (!stale) {
+      console.log(`  SKIP  ${thumbName} - up to date`);
+      continue;
+    }
+    try {
+      const input = fs.readFileSync(path.join(IMG_DIR, file));
+      const buffer = await sharp(input)
+        .resize(THUMB_SIZE, THUMB_SIZE, { fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: WEBP_QUALITY })
+        .toBuffer();
+      fs.writeFileSync(thumbPath, buffer);
+      console.log(`  THUMB ${file} -> ${thumbName} (${Math.round(buffer.size / 1024)}KB)`);
+      thumbs.push(thumbName);
+    } catch (err) {
+      console.error(`  ERROR thumb ${file}: ${err.message}`);
+    }
+  }
+
   console.log('\n=== Summary ===');
   console.log(`Total images: ${files.length}`);
   console.log(`Optimized: ${optimized}`);
   console.log(`Skipped (already small): ${skipped}`);
+  console.log(`Thumbnails generated: ${thumbs.length}`);
   console.log(`Total size: ${totalOriginal}KB -> ${totalNew}KB (${Math.round((1 - totalNew / totalOriginal) * 100)}% saved)`);
   console.log('');
 }

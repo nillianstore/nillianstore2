@@ -30,7 +30,7 @@ layout: layouts/home.njk
         <div class="hero-collage">
           {% for p in heroProducts %}
           <a href="{{ p.url | url }}" class="hc-tile" style="--i: {{ loop.index }}">
-            {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}"{% if loop.index0 >= 3 %} loading="lazy" decoding="async"{% else %} fetchpriority="high"{% endif %} width="400" height="400"/>{% endif %}
+            {% if p.data.cover %}<img src="{{ p.data.cover | thumb }}" alt="{{ p.data.cover_alt or p.data.title }}" srcset="{{ p.data.cover | thumb }} 400w, {{ p.data.cover }} 800w" sizes="(max-width: 991px) 45vw, (max-width: 1199px) 33vw, 25vw"{% if loop.index0 >= 3 %} loading="lazy" decoding="async"{% else %} fetchpriority="high" decoding="async"{% endif %} width="400" height="400"/>{% endif %}
           </a>
           {% endfor %}
         </div>
@@ -50,7 +50,7 @@ layout: layouts/home.njk
       {% for p in featured %}
       <a href="{{ p.url | url }}" class="card product-card text-decoration-none text-dark">
         <div class="card-img-wrap">
-          {% if p.data.cover %}<img src="{{ p.data.cover }}" alt="{{ p.data.cover_alt or p.data.title }}"{% if loop.index0 == 0 %} fetchpriority="high"{% else %} loading="lazy"{% endif %} width="600" height="600"/>{% endif %}
+          {% if p.data.cover %}<img src="{{ p.data.cover | thumb }}" alt="{{ p.data.cover_alt or p.data.title }}"{% if loop.index0 == 0 %} fetchpriority="high" decoding="async"{% else %} loading="lazy" decoding="async"{% endif %} width="400" height="400"/>{% endif %}
         </div>
         <div class="card-body">
           <p class="title fw-semibold mb-1">{{ p.data.title }}</p>
@@ -79,7 +79,7 @@ layout: layouts/home.njk
       <div class="col-6 col-md-4 col-lg-3">
         <a href="{{ shop.url | url }}" class="card product-card text-decoration-none text-dark">
           <div class="card-img-wrap">
-            {% if shop.data.cover %}<img src="{{ shop.data.cover }}" alt="{{ shop.data.cover_alt or shop.data.title }}" loading="lazy" width="600" height="600"/>{% endif %}
+            {% if shop.data.cover %}<img src="{{ shop.data.cover | thumb }}" alt="{{ shop.data.cover_alt or shop.data.title }}" loading="lazy" decoding="async" width="400" height="400"/>{% endif %}
           </div>
           <div class="card-body">
             <p class="title fw-semibold mb-1">{{ shop.data.title }}</p>
@@ -108,7 +108,7 @@ layout: layouts/home.njk
       {% for post in postslist %}
       <div class="col-md-4">
         <a href="{{ post.url | url }}" class="card product-card text-decoration-none text-dark">
-          {% if post.data.cover %}<div class="card-img-wrap ratio-16x9"><img src="{{ post.data.cover }}" alt="{{ post.data.cover_alt or post.data.title }}" loading="lazy" width="600" height="400"/></div>{% endif %}
+          {% if post.data.cover %}<div class="card-img-wrap ratio-16x9"><img src="{{ post.data.cover | thumb }}" alt="{{ post.data.cover_alt or post.data.title }}" loading="lazy" decoding="async" width="400" height="400"/></div>{% endif %}
           <div class="card-body">
             <p class="title fw-semibold mb-1">{{ post.data.title }}</p>
             <p class="excerpt mb-0">{{ post.data.description }}</p>
