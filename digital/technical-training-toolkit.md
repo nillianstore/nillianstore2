@@ -10,7 +10,7 @@ category: training
 sku: LMK-003
 author: Yasser Awadein
 digitalFormat: XLSX + PPTX + PDF
-buyUrl: 'mailto:nillianstore@gmail.com?subject=Technical Training Toolkit&body=Hi, I would like to order the digital product "Technical Training Toolkit" from nillianstore.com (AED see page / USD price shown on the product page). Please send me the payment instructions and file delivery details.'
+buyUrl: https://leeblaab.gumroad.com/l/TechnicalTrainingKIT
 tags:
   - technical training
   - trainer toolkit
