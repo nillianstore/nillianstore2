@@ -10,7 +10,7 @@ category: training
 sku: LMK-001
 author: Yasser Awadein
 digitalFormat: XLSX + PDF
-buyUrl: 'mailto:nillianstore@gmail.com?subject=Competency Matrix %26 Training Audit Toolkit&body=Hi, I would like to order the digital product "Competency Matrix %26 Training Audit Toolkit" from nillianstore.com (AED see page / USD price shown on the product page). Please send me the payment instructions and file delivery details.'
+buyUrl: https://banyadam.gumroad.com/l/TrainingAuditToolkit
 tags:
   - competency matrix
   - training matrix excel
