@@ -10,7 +10,7 @@ category: operations
 sku: LMK-002
 author: Yasser Awadein
 digitalFormat: XLSX + PDF
-buyUrl: https://letsgumroad.com/yasserawadein/shift-handover-log-pack
+buyUrl: 'mailto:nillianstore@gmail.com?subject=Shift Handover %26 Production Log Pack&body=Hi, I would like to order the digital product "Shift Handover %26 Production Log Pack" from nillianstore.com (AED see page / USD price shown on the product page). Please send me the payment instructions and file delivery details.'
 tags:
   - shift handover
   - production log

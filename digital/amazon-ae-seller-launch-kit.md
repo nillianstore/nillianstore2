@@ -10,7 +10,7 @@ category: ecommerce
 sku: LMK-004
 author: Yasser Awadein
 digitalFormat: XLSX + PDF
-buyUrl: https://letsgumroad.com/yasserawadein/amazon-ae-seller-launch-kit
+buyUrl: 'mailto:nillianstore@gmail.com?subject=Amazon.ae Seller Launch Kit&body=Hi, I would like to order the digital product "Amazon.ae Seller Launch Kit" from nillianstore.com (AED see page / USD price shown on the product page). Please send me the payment instructions and file delivery details.'
 tags:
   - amazon ae
   - seller launch

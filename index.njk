@@ -39,6 +39,32 @@ layout: layouts/home.njk
   </div>
 </section>
 
+<!-- ============ DIGITAL HIGHLIGHT STRIP ============ -->
+{% if collections.digitals and collections.digitals.length > 0 %}
+<section class="digital-banner" aria-label="Digital products">
+  <div class="container">
+    <div class="inner">
+      <div class="db-covers">
+        {% for d in collections.digitals | reverse | head(4) %}
+        <a href="{{ d.url | url }}" aria-label="{{ d.data.title }}">{% if d.data.cover %}<img src="{{ d.data.cover }}" alt="{{ d.data.cover_alt or d.data.title }}" loading="lazy" decoding="async" width="152" height="95"/>{% endif %}</a>
+        {% endfor %}
+      </div>
+      <div>
+        <span class="db-badge">NEW — DIGITAL DOWNLOADS</span>
+        <h2>Professional Excel Toolkits &amp; Guides</h2>
+        <p>Ready-to-use spreadsheets, audit packs and launch playbooks for L&amp;D, operations and UAE sellers. Built from 16 years in heavy industry. Download instantly — no shipping, no waiting.</p>
+        <ul class="db-points">
+          <li><i class="fas fa-bolt"></i>Instant download</li>
+          <li><i class="fas fa-file-excel"></i>Works in Excel &amp; Google Sheets</li>
+          <li><i class="fas fa-rotate-left"></i>30-day refund, keep the files</li>
+        </ul>
+        <a href="/digital/" class="btn btn-dark">Browse Digital Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- ============ FEATURED SCROLLER (from Option A) ============ -->
 <section class="featured" aria-label="Featured products">
   <div class="container-fluid">
@@ -61,32 +87,6 @@ layout: layouts/home.njk
     </div>
   </div>
 </section>
-
-<!-- ============ DIGITAL HIGHLIGHT STRIP ============ -->
-{% if collections.digitals and collections.digitals.length > 0 %}
-<section class="digital-banner" aria-label="Digital products">
-  <div class="container">
-    <div class="inner">
-      <div class="db-covers">
-        {% for d in collections.digitals | reverse | head(4) %}
-        <a href="{{ d.url | url }}" aria-label="{{ d.data.title }}">{% if d.data.cover %}<img src="{{ d.data.cover }}" alt="{{ d.data.cover_alt or d.data.title }}" loading="lazy" decoding="async" width="96" height="60"/>{% endif %}</a>
-        {% endfor %}
-      </div>
-      <div>
-        <span class="db-badge">NEW — DIGITAL DOWNLOADS</span>
-        <h2>Professional Excel Toolkits &amp; Guides</h2>
-        <p>Ready-to-use spreadsheets, audit packs and launch playbooks for L&amp;D, operations and UAE sellers. Built from 16 years in heavy industry. Download instantly — no shipping, no waiting.</p>
-        <ul class="db-points">
-          <li><i class="fas fa-bolt"></i>Instant download</li>
-          <li><i class="fas fa-file-excel"></i>Works in Excel &amp; Google Sheets</li>
-          <li><i class="fas fa-rotate-left"></i>30-day refund, keep the files</li>
-        </ul>
-        <a href="/digital/" class="btn btn-dark">Browse Digital Products</a>
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
 
 <!-- ============ NEW PRODUCTS GRID (Option B) ============ -->
 <section class="products" aria-label="New products">

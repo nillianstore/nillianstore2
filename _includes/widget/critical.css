@@ -75,9 +75,10 @@ h1,h2,h3,h4,h5,h6{font-family:'Manrope',sans-serif;letter-spacing:-0.5px}
 .ns-trust-inner .t-dot{width:7px;height:7px;border-radius:50%;background:var(--ns-amber);flex:none}
 .badge.trust-badge{background:#fff;border:1px solid var(--ns-line);color:var(--ns-ink);font-weight:700;font-size:11px;letter-spacing:.4px;border-radius:8px;padding:7px 11px}
 .digital-banner{background:var(--ns-soft);border-top:1px solid var(--ns-line);border-bottom:1px solid var(--ns-line)}
-.digital-banner .inner{display:flex;align-items:center;gap:28px;padding:34px 0}
+.digital-banner .inner{display:flex;align-items:center;gap:36px;padding:56px 0}
 .digital-banner .db-covers{display:flex;gap:10px;flex-shrink:0}
-.digital-banner .db-covers img{width:96px;height:60px;object-fit:cover;border-radius:10px;border:1px solid var(--ns-line)}
+.digital-banner .db-covers a{display:block}
+.digital-banner .db-covers img{width:152px;height:95px;object-fit:cover;border-radius:10px;border:1px solid var(--ns-line)}
 .db-badge{display:inline-block;background:#fff;border:1px solid var(--ns-line);border-left:3px solid var(--ns-amber);border-radius:8px;padding:6px 12px;font-size:11.5px;font-weight:800;letter-spacing:.5px;margin-bottom:10px}
 .digital-banner h2{font-size:24px;font-weight:800;margin-bottom:6px}
 .digital-banner p{color:var(--ns-muted);font-size:14.5px;line-height:1.55;margin:0 0 14px;max-width:620px}
