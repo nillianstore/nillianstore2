@@ -579,6 +579,12 @@ footer.ns-footer {
 .scroller .product-card { flex: 0 0 240px; scroll-snap-align: start; }
 @media (max-width: 600px) { .scroller .product-card { flex: 0 0 200px; } }
 
+/* ---------- Digital featured: same size as physical cards, mirrored layout ---------- */
+.digital-featured .scroller .product-card { display: flex; flex-direction: row-reverse; }
+.digital-featured .card-img-wrap { flex: 0 0 120px; aspect-ratio: auto; width: 120px; height: 120px; }
+.digital-featured .card-body { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+@media (max-width: 600px) { .digital-featured .card-img-wrap { width: 100px; height: 100px; flex-basis: 100px; } }
+
 /* ---------- Section shells (home) ---------- */
 .products { padding: 40px 0 48px; }
 .banner { background: var(--ns-soft); border-top: 1px solid var(--ns-line); }
