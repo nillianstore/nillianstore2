@@ -37,17 +37,16 @@
         {% endfor %}
       </ul>
 
-      <p class="hprice mb-3">AED {{ priceAed }} <small class="usd">· ${{ priceUsd }} USD</small></p>
+{% if priceUsd == 0 %}<p class="hprice mb-3">FREE <small class="usd">· open source</small></p>{% else %}<p class="hprice mb-3">AED {{ priceAed }} <small class="usd">· ${{ priceUsd }} USD</small></p>{% endif %}
 
       <a
-        href="{{ buyUrl }}"
-        rel="nofollow"
+        href="{{ buyUrl }}"{% if priceUsd == 0 %} target="_blank" rel="noopener nofollow"{% else %} rel="nofollow"{% endif %}
         id="digital-buy-button"
         class="buybtn">
-        Order via Email — Instant Delivery
+        {% if priceUsd == 0 %}Download Free — GitHub{% else %}Order via Email — Instant Delivery{% endif %}
       </a>
       <p class="note mt-2">
-        Email order · You get the files by email right after payment is confirmed<br>
+        {% if priceUsd == 0 %}Free &amp; open source (AGPL-3.0) · Source code, releases and docs on GitHub<br>{% else %}Email order · You get the files by email right after payment is confirmed<br>{% endif %}
         {{ digitalFormat }} · Works on Windows &amp; Mac
       </p>
 

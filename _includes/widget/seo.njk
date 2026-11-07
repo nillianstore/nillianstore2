@@ -140,10 +140,13 @@
   "offers": {
     "@type": "Offer",
     "url": "{{ site.url }}{{ page.url | url }}",
-    "priceCurrency": "USD",
+    {% if priceUsd == 0 %}"priceCurrency": "EUR",
+    "price": 0,
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "{{ now | priceValidUntil }}",{% else %}"priceCurrency": "USD",
     "price": {{ priceUsd }},
     "priceValidUntil": "{{ now | priceValidUntil }}",
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/InStock",{% endif %}
     "seller": {
       "@type": "Organization",
       "name": "{{ metadata.title }}",

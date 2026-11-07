@@ -23,7 +23,7 @@
             <span class="badge cat">{{ d.data.category }}</span>
             <p class="title fw-semibold mt-2 mb-1">{{ d.data.title }}</p>
             <p class="excerpt mb-2">{{ d.data.description | truncate(110) }}</p>
-            <p class="price mb-0">AED {{ d.data.priceAed }} <small>· ${{ d.data.priceUsd }} USD</small></p>
+{% if d.data.priceUsd == 0 %}<p class="price mb-0">FREE <small>· open source</small></p>{% else %}<p class="price mb-0">AED {{ d.data.priceAed }} <small>· ${{ d.data.priceUsd }} USD</small></p>{% endif %}
           </div>
         </a>
       </div>
