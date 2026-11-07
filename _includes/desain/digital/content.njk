@@ -1,0 +1,135 @@
+<article class="container pd">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="small text-muted mb-3 crumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/digital/">Digital</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ title | truncate(48) }}</li>
+    </ol>
+  </nav>
+
+  <!-- 1. Title -->
+  <h1 class="mb-2">{{ title }}</h1>
+  <p class="lead text-muted mb-4">{{ description }}</p>
+
+  <!-- 2. Cover (Left) + Features, Price & CTA (Right) -->
+  <div class="row align-items-start g-4 mb-5">
+    <div class="col-md-6">
+      {% if cover %}
+        <div class="cover-frame">
+          <img
+            src="{{ cover }}"
+            alt="{{ cover_alt or title }}"
+            width="640"
+            height="400"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="col-md-6">
+      <ul class="list-unstyled small mb-3">
+        <li class="fw-semibold mb-1">What's inside</li>
+        {% for point in bullet_points %}
+          <li class="mb-2">✓ {{ point }}</li>
+        {% endfor %}
+      </ul>
+
+      <p class="hprice mb-3">AED {{ priceAed }} <small class="usd">· ${{ priceUsd }} USD</small></p>
+
+      <a
+        href="{{ buyUrl }}"
+        target="_blank"
+        rel="noopener nofollow"
+        id="digital-buy-button"
+        class="buybtn">
+        Buy Now — Instant Download
+      </a>
+      <p class="note mt-2">
+        Secure checkout · Download link delivered the moment payment clears<br>
+        {{ digitalFormat }} · Works on Windows &amp; Mac
+      </p>
+
+      <div class="trust-badges mt-3">
+        <span class="badge trust-badge"><i class="fas fa-shield-alt me-1"></i>Secure Checkout</span>
+        <span class="badge trust-badge"><i class="fas fa-bolt me-1"></i>Instant Access</span>
+        <span class="badge trust-badge"><i class="fas fa-rotate-left me-1"></i>30-Day Refund, Keep Files</span>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="/refund-policy/" class="small me-3">Refund Policy</a>
+        <a href="/privacy-policy/" class="small me-3">Privacy</a>
+        <a href="/terms-of-service/" class="small">Terms</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Tags -->
+  <div class="mb-4 d-flex flex-wrap gap-2">
+    {% for tag in tags | filterTagList %}
+      {% if tag in collections.tagList %}
+      <a href="/tags/{{ tag | safeSlug }}/" class="tag-pill">#{{ tag }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- 4. Product Details -->
+  <div class="prose col-lg-10 mx-auto my-4">
+    <h2 class="h4">Product Details</h2>
+    {{ content | safe }}
+  </div>
+
+  <!-- 5. Related digital products -->
+  {% set related = [] %}
+  {% for item in collections.digitals %}
+    {% if item.url != page.url and related.length < 3 %}
+      {% if related.push(item) %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if related.length > 0 %}
+  <section class="my-5 dgrid">
+    <h2 class="h3 mb-4">More digital toolkits</h2>
+    <div class="row g-4">
+      {% for rel in related %}
+        <div class="col-6 col-md-4">
+          <a href="{{ rel.url | url }}" class="card product-card text-decoration-none text-dark">
+            <div class="card-img-wrap ratio-16x10">
+              {% if rel.data.cover %}<img src="{{ rel.data.cover }}" alt="{{ rel.data.cover_alt or rel.data.title }}" loading="lazy" decoding="async" width="640" height="400"/>{% endif %}
+            </div>
+            <div class="card-body">
+              <p class="title fw-semibold mb-1">{{ rel.data.title }}</p>
+              <p class="price mb-0">AED {{ rel.data.priceAed }} <small>· ${{ rel.data.priceUsd }}</small></p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var buyButton = document.getElementById('digital-buy-button');
+  if (buyButton) {
+    buyButton.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'begin_checkout', {
+          'currency': 'USD',
+          'value': {{ priceUsd }},
+          'items': [
+            {
+              'item_id': '{{ sku }}',
+              'item_name': '{{ title }}',
+              'price': {{ priceUsd }},
+              'quantity': 1
+            }
+          ]
+        });
+      }
+    });
+  }
+});
+</script>

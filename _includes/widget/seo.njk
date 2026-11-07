@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="{{ metadata.title }}">
 
 {%- set ogType = "website" -%}
-{%- if tags and "shop" in tags -%}
+{%- if tags and ("shop" in tags or "digitals" in tags) -%}
   {%- set ogType = "product" -%}
 {%- elif tags and ("post" in tags or "blog" in tags) -%}
   {%- set ogType = "article" -%}
@@ -114,6 +114,40 @@
       "merchantReturnDays": 15,
       "returnMethod": "https://schema.org/ReturnByMail",
       "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+}
+</script>
+{% elif tags and "digitals" in tags %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ title }}",
+  "image": ["{{ site.url }}{{ cover }}"],
+  "description": "{{ description | sanitize }}",
+  "sku": "{{ sku }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ author or 'Nillianstore' }}"
+  },
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "File format",
+    "value": "{{ digitalFormat }}"
+  },
+  {% if author %}"author": { "@type": "Person", "name": "{{ author }}" },{% endif %}
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ site.url }}{{ page.url | url }}",
+    "priceCurrency": "USD",
+    "price": {{ priceUsd }},
+    "priceValidUntil": "{{ now | priceValidUntil }}",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ metadata.title }}",
+      "url": "{{ site.url }}"
     }
   }
 }

@@ -582,6 +582,16 @@ footer.ns-footer {
 /* ---------- Section shells (home) ---------- */
 .products { padding: 40px 0 48px; }
 .banner { background: var(--ns-soft); border-top: 1px solid var(--ns-line); }
+.digital-banner { background: var(--ns-soft); border-top: 1px solid var(--ns-line); border-bottom: 1px solid var(--ns-line); }
+.digital-banner .inner { display: flex; align-items: center; gap: 28px; padding: 34px 0; }
+.digital-banner .db-covers { display: flex; gap: 10px; flex-shrink: 0; }
+.digital-banner .db-covers img { width: 96px; height: 60px; object-fit: cover; border-radius: 10px; border: 1px solid var(--ns-line); }
+.db-badge { display: inline-block; background: #fff; border: 1px solid var(--ns-line); border-left: 3px solid var(--ns-amber); border-radius: 8px; padding: 6px 12px; font-size: 11.5px; font-weight: 800; letter-spacing: .5px; margin-bottom: 10px; }
+.digital-banner h2 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
+.digital-banner p { color: var(--ns-muted); font-size: 14.5px; line-height: 1.55; margin: 0 0 14px; max-width: 620px; }
+.db-points { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0 0 16px; font-size: 13px; font-weight: 600; color: var(--ns-ink); }
+.db-points i { color: var(--ns-amber); margin-right: 6px; }
+@media (max-width: 900px) { .digital-banner .inner { flex-direction: column; align-items: flex-start; gap: 18px; } }
 
 /* ---------- Product card shared ---------- */
 .product-card {
@@ -592,7 +602,8 @@ footer.ns-footer {
 .product-card .price { font-weight: 800; font-size: 14.5px; letter-spacing: -0.2px; color: var(--ns-ink); }
 .product-card .excerpt { font-size: 13px; color: var(--ns-muted); line-height: 1.5; }
 .card-img-wrap { aspect-ratio: 1/1; background: var(--ns-soft); overflow: hidden; }
-.card-img-wrap.ratio-16x9 { aspect-ratio: 16/9; }
+.card-img-wrap.ratio-16x9{aspect-ratio:16/9}
+.card-img-wrap.ratio-16x10{aspect-ratio:16/10}
 .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
 .product-card:hover .card-img-wrap img { transform: scale(1.03); }
 
@@ -604,3 +615,39 @@ footer.ns-footer {
   font-weight: 700; font-size: 11px; letter-spacing: .4px;
   border-radius: 8px; padding: 7px 11px;
 }
+
+/* ---------- Digital: home banner strip (Draft 1) ---------- */
+.digital-banner { background: var(--ns-soft); border-top: 1px solid var(--ns-line); border-bottom: 1px solid var(--ns-line); }
+.digital-banner .inner { display: flex; align-items: center; gap: 28px; padding: 34px 0; }
+.digital-banner .db-covers { display: flex; gap: 10px; flex-shrink: 0; }
+.digital-banner .db-covers img { width: 96px; height: 60px; object-fit: cover; border-radius: 10px; border: 1px solid var(--ns-line); }
+.db-badge { display: inline-block; background: #fff; border: 1px solid var(--ns-line); border-left: 3px solid var(--ns-amber); border-radius: 8px; padding: 6px 12px; font-size: 11.5px; font-weight: 800; letter-spacing: .5px; margin-bottom: 10px; }
+.digital-banner h2 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
+.digital-banner p { color: var(--ns-muted); font-size: 14.5px; line-height: 1.55; margin: 0 0 14px; max-width: 620px; }
+.db-points { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0 0 16px; font-size: 13px; font-weight: 600; color: var(--ns-ink); }
+.db-points i { color: var(--ns-amber); margin-right: 6px; }
+@media (max-width: 900px) { .digital-banner .inner { flex-direction: column; align-items: flex-start; gap: 18px; } }
+
+/* ---------- Digital: listing page /digital/ ---------- */
+.dhead { border-bottom: 1px solid var(--ns-line); padding: 44px 0 36px; }
+.dhead h1 { font-size: 34px; font-weight: 800; margin-bottom: 8px; }
+.dhead p.lead { color: var(--ns-muted); max-width: 640px; font-size: 15.5px; line-height: 1.6; margin: 0 0 18px; }
+.dmeta { display: flex; gap: 10px; flex-wrap: wrap; }
+.dgrid .card-img-wrap { aspect-ratio: 16/10; }
+.dgrid .excerpt { font-size: 13px; color: var(--ns-muted); line-height: 1.5; margin: 0 0 10px; }
+.dgrid .badge.cat { background: var(--ns-soft); border: 1px solid var(--ns-line); color: var(--ns-muted); font-weight: 700; font-size: 10.5px; letter-spacing: .4px; border-radius: 6px; padding: 4px 9px; text-transform: uppercase; }
+.dgrid .price small { font-weight: 600; color: var(--ns-muted); }
+
+/* ---------- Digital: product detail ---------- */
+.crumb { font-size: 13px; color: var(--ns-muted); margin: 22px 0 18px; }
+.crumb a { color: var(--ns-muted); }
+.pd h1 { font-size: 29px; font-weight: 800; margin-bottom: 8px; }
+.pd .lead { color: var(--ns-muted); font-size: 15.5px; line-height: 1.6; max-width: 720px; margin: 0 0 30px; }
+.pd .cover-frame { border: 1px solid var(--ns-line); border-radius: var(--ns-radius); overflow: hidden; background: var(--ns-soft); }
+.pd .cover-frame img { width: 100%; display: block; }
+.pd .hprice { font-size: 26px; font-weight: 800; margin-bottom: 16px; }
+.pd .hprice small.usd { font-weight: 600; color: var(--ns-muted); font-size: 17px; }
+.buybtn { display: block; width: 100%; text-align: center; background: var(--ns-ink); color: #fff; border-radius: 12px; padding: 15px; font-weight: 800; font-size: 16px; border: 1px solid var(--ns-ink); }
+.buybtn:hover { background: #000; color: #fff; }
+.pd .note { font-size: 12.5px; color: var(--ns-muted); text-align: center; margin-top: 10px; }
+.trust-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }

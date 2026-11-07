@@ -8,7 +8,7 @@
       {%- if page.url == "/" %}
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
-      {%- elseif page.data.tags and ("post" in page.data.tags or "shop" in page.data.tags) %}
+      {%- elseif page.data.tags and ("post" in page.data.tags or "shop" in page.data.tags or "digitals" in page.data.tags) %}
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
       {%- else %}

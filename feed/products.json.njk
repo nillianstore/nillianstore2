@@ -11,6 +11,15 @@ eleventyExcludeFromCollections: true
         "image": "{{ site.url }}{{ item.data.cover }}",
         "price": "{{ item.data.price }}",
         "link": "{{ site.url }}{{ item.url | url }}"
+      }{%- if not loop.last or collections.digitals.length > 0 %},{% endif %}
+    {%- endfor -%}
+    {%- for item in collections.digitals %}
+      {
+        "title": "{{ item.data.title }}",
+        "description": "{{ item.data.description | striptags | xmlEncode }}",
+        "image": "{{ site.url }}{{ item.data.cover }}",
+        "price": "AED {{ item.data.priceAed }} / ${{ item.data.priceUsd }} USD (digital)",
+        "link": "{{ site.url }}{{ item.url | url }}"
       }{%- if not loop.last %},{% endif %}
     {%- endfor %}
   ]

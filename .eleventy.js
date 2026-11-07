@@ -96,7 +96,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('filterTagList', (tags) => {
-    return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts', 'shop', 'shops'].indexOf(tag) === -1);
+    return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts', 'shop', 'shops', 'digital', 'digitals'].indexOf(tag) === -1);
   });
 
   eleventyConfig.addFilter("sanitize", function (str) {
@@ -106,13 +106,13 @@ module.exports = function (eleventyConfig) {
   // ✅ Collections
   // Create a collection for all shop products
 eleventyConfig.addCollection("tagList", function(collection) {
-  const IGNORED = ["all", "nav", "post", "posts", "shop", "shops"];
+  const IGNORED = ["all", "nav", "post", "posts", "shop", "shops", "digital", "digitals"];
   const counts = new Map(); // raw tag -> number of shop products carrying it
 
   collection.getAll().forEach(item => {
     if (!item.data.tags) return;
     const tags = Array.isArray(item.data.tags) ? item.data.tags : [item.data.tags];
-    if (!tags.includes("shops")) return; // products only
+    if (!tags.includes("shops") && !tags.includes("digitals")) return; // products only
     tags.forEach(tag => {
       if (IGNORED.includes(tag)) return;
       counts.set(tag, (counts.get(tag) || 0) + 1);

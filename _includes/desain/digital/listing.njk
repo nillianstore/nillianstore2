@@ -1,0 +1,33 @@
+<div class="dhead">
+  <div class="container">
+    <h1>Digital Products</h1>
+    <p class="lead">Professional Excel toolkits, audit packs and launch guides — built from 16 years in steel, logistics and process operations. Buy once, download instantly, use in Excel or Google Sheets.</p>
+    <div class="dmeta">
+      <span class="badge trust-badge"><i class="fas fa-bolt me-1" style="color:var(--ns-amber)"></i>INSTANT DOWNLOAD</span>
+      <span class="badge trust-badge"><i class="fas fa-file-excel me-1" style="color:var(--ns-amber)"></i>EXCEL + GOOGLE SHEETS</span>
+      <span class="badge trust-badge"><i class="fas fa-rotate-left me-1" style="color:var(--ns-amber)"></i>30-DAY REFUND, KEEP FILES</span>
+    </div>
+  </div>
+</div>
+
+<section class="products dgrid" aria-label="Digital products">
+  <div class="container">
+    <div class="row g-4">
+      {% for d in collections.digitals %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="{{ d.url | url }}" class="card product-card text-decoration-none text-dark">
+          <div class="card-img-wrap ratio-16x10">
+            {% if d.data.cover %}<img src="{{ d.data.cover }}" alt="{{ d.data.cover_alt or d.data.title }}" loading="lazy" decoding="async" width="640" height="400"/>{% endif %}
+          </div>
+          <div class="card-body">
+            <span class="badge cat">{{ d.data.category }}</span>
+            <p class="title fw-semibold mt-2 mb-1">{{ d.data.title }}</p>
+            <p class="excerpt mb-2">{{ d.data.description | truncate(110) }}</p>
+            <p class="price mb-0">AED {{ d.data.priceAed }} <small>· ${{ d.data.priceUsd }} USD</small></p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
