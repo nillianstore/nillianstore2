@@ -43,10 +43,10 @@
         href="{{ buyUrl }}"{% if priceUsd == 0 %} target="_blank" rel="noopener nofollow"{% else %} rel="nofollow"{% endif %}
         id="digital-buy-button"
         class="buybtn">
-        {% if priceUsd == 0 %}Download Free — GitHub{% else %}Order via Email — Instant Delivery{% endif %}
+        {% if priceUsd == 0 %}Download Free — GitHub{% else %}Buy on Gumroad — Instant Download{% endif %}
       </a>
       <p class="note mt-2">
-        {% if priceUsd == 0 %}Free &amp; open source (AGPL-3.0) · Source code, releases and docs on GitHub<br>{% else %}Email order · You get the files by email right after payment is confirmed<br>{% endif %}
+        {% if priceUsd == 0 %}Free &amp; open source (AGPL-3.0) · Source code, releases and docs on GitHub<br>{% else %}Secure checkout on Gumroad · Your files are delivered instantly after payment<br>{% endif %}
         {{ digitalFormat }} · Works on Windows &amp; Mac
       </p>
 
