@@ -10,7 +10,7 @@ category: automation
 sku: LMK-005
 author: LEEBLAAB
 digitalFormat: Python + YAML + PDF guides
-buyUrl: 'mailto:nillianstore@gmail.com?subject=Social %26 Blog Content Bot Kit&body=Hi, I would like to order the digital product "Social & Blog Content Bot Kit" from nillianstore.com (AED 99 / $27). Please send me the payment instructions and file delivery details.'
+buyUrl: https://leeblaab.gumroad.com/l/SocialBlogBotKit
 tags:
   - social media automation
   - instagram auto posting
