@@ -10,7 +10,7 @@ category: training
 sku: LMK-001
 author: Yasser Awadein
 digitalFormat: XLSX + PDF
-buyUrl: https://banyadam.gumroad.com/l/TrainingAuditToolkit
+buyUrl: https://leeblaab.gumroad.com/l/TrainingAuditToolkit
 tags:
   - competency matrix
   - training matrix excel
